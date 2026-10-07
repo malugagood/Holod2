@@ -53,7 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 25px;
+            gap: 20px;
         }
 
         .logo {
@@ -68,7 +68,7 @@
 
         nav {
             display: flex;
-            gap: 28px;
+            gap: 25px;
             font-size: 15px;
             font-weight: 600;
         }
@@ -77,10 +77,24 @@
             color: #1463ff;
         }
 
+        .header-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
         .phone {
             background: #1463ff;
             color: white;
-            padding: 12px 18px;
+            padding: 11px 15px;
+            border-radius: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .telegram {
+            background: #229ed9;
+            color: white;
+            padding: 11px 15px;
             border-radius: 10px;
             font-weight: 700;
             white-space: nowrap;
@@ -88,6 +102,10 @@
 
         .phone:hover {
             background: #0d50d5;
+        }
+
+        .telegram:hover {
+            background: #1688bd;
         }
 
         /* HERO */
@@ -159,14 +177,14 @@
             transform: translateY(-2px);
         }
 
-        .btn-secondary {
-            background: white;
-            border: 1px solid #d9dfeb;
+        .btn-telegram {
+            background: #229ed9;
+            color: white;
         }
 
-        .btn-secondary:hover {
-            border-color: #1463ff;
-            color: #1463ff;
+        .btn-telegram:hover {
+            background: #1688bd;
+            transform: translateY(-2px);
         }
 
         .hero-card {
@@ -191,7 +209,7 @@
             font-size: 25px;
         }
 
-        /* SERVICES */
+        /* SECTIONS */
 
         section {
             padding: 80px 0;
@@ -212,6 +230,8 @@
             color: #687286;
             font-size: 17px;
         }
+
+        /* CARDS */
 
         .cards {
             display: grid;
@@ -310,17 +330,19 @@
             margin-bottom: 15px;
         }
 
-        .product-price {
-            font-size: 21px;
-            font-weight: 800;
-            color: #1463ff;
+        .contact-product {
+            display: inline-block;
+            margin-top: 5px;
+            background: #229ed9;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 9px;
+            font-weight: 700;
+            font-size: 14px;
         }
 
-        .coming {
-            text-align: center;
-            color: #687286;
-            margin-top: 25px;
-            font-size: 15px;
+        .contact-product:hover {
+            background: #1688bd;
         }
 
         /* CTA */
@@ -346,10 +368,21 @@
             opacity: 0.9;
         }
 
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         .cta .btn {
             background: white;
             color: #1463ff;
             white-space: nowrap;
+        }
+
+        .cta .btn-telegram {
+            background: #229ed9;
+            color: white;
         }
 
         /* FOOTER */
@@ -379,7 +412,8 @@
 
         /* MOBILE */
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
+
             nav {
                 display: none;
             }
@@ -407,9 +441,22 @@
             }
         }
 
-        @media (max-width: 500px) {
-            .phone {
-                padding: 10px 12px;
+        @media (max-width: 600px) {
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .header-buttons .phone {
+                display: none;
+            }
+
+            .telegram {
+                padding: 9px 11px;
                 font-size: 13px;
             }
 
@@ -444,6 +491,7 @@
 <body>
 
 <header>
+
     <div class="container header-inner">
 
         <a href="#" class="logo">
@@ -457,11 +505,22 @@
             <a href="#contacts">Контакты</a>
         </nav>
 
-        <a class="phone" href="tel:+79060071215">
-            📞 +7 906 007-12-15
-        </a>
+        <div class="header-buttons">
+
+            <a class="phone" href="tel:+79060071215">
+                📞 Позвонить
+            </a>
+
+            <a class="telegram"
+               href="https://t.me/malugagood"
+               target="_blank">
+                ✈️ Telegram
+            </a>
+
+        </div>
 
     </div>
+
 </header>
 
 
@@ -470,12 +529,13 @@
     <!-- HERO -->
 
     <section class="hero">
+
         <div class="container hero-grid">
 
             <div>
 
                 <div class="badge">
-                    Москва и вся территория Москвы
+                    Москва
                 </div>
 
                 <h1>
@@ -484,9 +544,9 @@
                 </h1>
 
                 <p>
-                    Продажа проверенных холодильников и стиральных машин,
+                    Продажа холодильников и стиральных машин,
                     а также профессиональный ремонт бытовой техники
-                    с выездом на дом.
+                    с выездом мастера по Москве.
                 </p>
 
                 <div class="buttons">
@@ -495,8 +555,10 @@
                         🛒 Смотреть технику
                     </a>
 
-                    <a href="tel:+79060071215" class="btn btn-secondary">
-                        🔧 Вызвать мастера
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="btn btn-telegram">
+                        ✈️ Написать в Telegram
                     </a>
 
                 </div>
@@ -507,7 +569,10 @@
             <div class="hero-card">
 
                 <div>
-                    <div class="hero-card-icon">🧊</div>
+
+                    <div class="hero-card-icon">
+                        🧊
+                    </div>
 
                     <h3>
                         Бытовая техника<br>
@@ -519,6 +584,7 @@
             </div>
 
         </div>
+
     </section>
 
 
@@ -534,7 +600,7 @@
 
                 <p>
                     Поможем купить технику или восстановить
-                    уже имеющуюся технику дома.
+                    уже имеющуюся технику.
                 </p>
 
             </div>
@@ -602,8 +668,8 @@
                 <h2>Почему выбирают нас</h2>
 
                 <p>
-                    Наша задача — сделать покупку и ремонт
-                    техники максимально простыми.
+                    Сделаем покупку и ремонт техники
+                    максимально простыми.
                 </p>
 
             </div>
@@ -613,8 +679,8 @@
 
                 <div class="advantage">
                     <div class="advantage-icon">🔍</div>
-                    <h3>Проверенная техника</h3>
-                    <p>Перед продажей техника проверяется.</p>
+                    <h3>Проверка техники</h3>
+                    <p>Техника проверяется перед продажей.</p>
                 </div>
 
                 <div class="advantage">
@@ -626,13 +692,13 @@
                 <div class="advantage">
                     <div class="advantage-icon">💰</div>
                     <h3>Доступные цены</h3>
-                    <p>Б/У техника помогает экономить бюджет.</p>
+                    <p>Поможем подобрать технику под бюджет.</p>
                 </div>
 
                 <div class="advantage">
-                    <div class="advantage-icon">📞</div>
-                    <h3>Всегда на связи</h3>
-                    <p>Позвоните нам для консультации.</p>
+                    <div class="advantage-icon">📱</div>
+                    <h3>Связь в Telegram</h3>
+                    <p>Можно быстро связаться с нами онлайн.</p>
                 </div>
 
             </div>
@@ -674,12 +740,14 @@
 
                         <p>
                             Б/У холодильники различных моделей.
-                            Фотографии и цены скоро появятся.
+                            Уточняйте наличие и цену.
                         </p>
 
-                        <div class="product-price">
-                            От 5 000 ₽
-                        </div>
+                        <a href="https://t.me/malugagood"
+                           target="_blank"
+                           class="contact-product">
+                            Узнать о наличии
+                        </a>
 
                     </div>
 
@@ -698,12 +766,14 @@
 
                         <p>
                             Проверенные стиральные машины.
-                            Актуальные модели добавим сюда.
+                            Уточняйте актуальные модели.
                         </p>
 
-                        <div class="product-price">
-                            От 5 000 ₽
-                        </div>
+                        <a href="https://t.me/malugagood"
+                           target="_blank"
+                           class="contact-product">
+                            Узнать о наличии
+                        </a>
 
                     </div>
 
@@ -725,20 +795,17 @@
                             машин с выездом мастера.
                         </p>
 
-                        <div class="product-price">
-                            По телефону
-                        </div>
+                        <a href="https://t.me/malugagood"
+                           target="_blank"
+                           class="contact-product">
+                            Написать мастеру
+                        </a>
 
                     </div>
 
                 </div>
 
             </div>
-
-            <p class="coming">
-                * Цены указаны как пример и будут заменены
-                на актуальные предложения.
-            </p>
 
         </div>
 
@@ -756,14 +823,24 @@
                 <h2>Нужна техника или ремонт?</h2>
 
                 <p>
-                    Позвоните нам — проконсультируем и поможем решить вопрос.
+                    Позвоните или напишите нам в Telegram.
                 </p>
 
             </div>
 
-            <a href="tel:+79060071215" class="btn">
-                📞 +7 906 007-12-15
-            </a>
+            <div class="cta-buttons">
+
+                <a href="tel:+79060071215" class="btn">
+                    📞 +7 906 007-12-15
+                </a>
+
+                <a href="https://t.me/malugagood"
+                   target="_blank"
+                   class="btn btn-telegram">
+                    ✈️ Telegram
+                </a>
+
+            </div>
 
         </div>
 
@@ -789,7 +866,7 @@
         </div>
 
         <div class="footer-text">
-            Москва
+            Москва · Telegram: @malugagood
         </div>
 
     </div>
