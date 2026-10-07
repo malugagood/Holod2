@@ -8,7 +8,7 @@
     <title>БытМастер — техника и ремонт в Москве</title>
 
     <meta name="description"
-          content="БытМастер — продажа б/у холодильников и стиральных машин, ремонт бытовой техники на дому в Москве.">
+          content="Продажа б/у холодильников и стиральных машин. Ремонт бытовой техники на дому в Москве.">
 
     <style>
 
@@ -101,14 +101,6 @@
             background: #229ed9;
         }
 
-        .phone:hover {
-            background: #0d50d5;
-        }
-
-        .telegram:hover {
-            background: #1688bd;
-        }
-
 
         /* HERO */
 
@@ -141,7 +133,6 @@
             font-size: clamp(40px, 5vw, 62px);
             line-height: 1.05;
             margin-bottom: 25px;
-            letter-spacing: -1.5px;
         }
 
         .hero h1 span {
@@ -166,7 +157,6 @@
             padding: 15px 22px;
             border-radius: 10px;
             font-weight: 700;
-            transition: .2s;
         }
 
         .btn-primary {
@@ -174,19 +164,9 @@
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #0d50d5;
-            transform: translateY(-2px);
-        }
-
         .btn-telegram {
             background: #229ed9;
             color: white;
-        }
-
-        .btn-telegram:hover {
-            background: #1688bd;
-            transform: translateY(-2px);
         }
 
         .hero-card {
@@ -248,12 +228,6 @@
             border: 1px solid #e7eaf0;
             border-radius: 18px;
             padding: 30px;
-            transition: .2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(20, 35, 65, .08);
         }
 
         .card-icon {
@@ -320,45 +294,103 @@
         }
 
 
-        /* PRODUCTS */
+        /* CATALOG */
+
+        .catalog {
+            background: #f5f7fb;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter-btn {
+            border: 1px solid #dce1ea;
+            background: white;
+            color: #39445a;
+            padding: 11px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #1463ff;
+            border-color: #1463ff;
+            color: white;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
 
         .product-card {
             background: white;
-            border: 1px solid #e7eaf0;
+            border: 1px solid #e4e8ef;
             border-radius: 18px;
             overflow: hidden;
+            transition: .2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(20, 35, 65, .08);
         }
 
         .product-image {
-            height: 190px;
+            height: 210px;
             background: linear-gradient(135deg, #eaf1ff, #d9e6ff);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 70px;
+            font-size: 75px;
         }
 
-        .product-content {
+        .product-info {
             padding: 22px;
         }
 
-        .product-content h3 {
+        .product-category {
+            color: #1463ff;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .product-info h3 {
+            font-size: 21px;
             margin-bottom: 8px;
         }
 
-        .product-content p {
+        .product-info p {
             color: #687286;
+            font-size: 14px;
             margin-bottom: 18px;
         }
 
+        .product-price {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #172033;
+        }
+
         .product-button {
-            display: inline-block;
+            display: block;
+            text-align: center;
             background: #229ed9;
             color: white;
-            padding: 10px 15px;
+            padding: 11px 15px;
             border-radius: 9px;
             font-weight: 700;
-            font-size: 14px;
         }
 
         .product-button:hover {
@@ -445,7 +477,8 @@
                 gap: 35px;
             }
 
-            .cards {
+            .cards,
+            .catalog-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -486,10 +519,6 @@
                 font-size: 40px;
             }
 
-            .hero p {
-                font-size: 17px;
-            }
-
             section {
                 padding: 60px 0;
             }
@@ -515,8 +544,6 @@
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
     <div class="container header-inner">
@@ -525,34 +552,23 @@
             Быт<span>Мастер</span>
         </a>
 
-
         <nav>
-
             <a href="#services">Услуги</a>
-
             <a href="#repair">Ремонт</a>
-
             <a href="#products">Техника</a>
-
             <a href="#advantages">Почему мы</a>
-
             <a href="#contacts">Контакты</a>
-
         </nav>
-
 
         <div class="header-buttons">
 
-            <a
-                class="phone"
-                href="tel:+79060071215">
+            <a class="phone" href="tel:+79060071215">
                 📞 Позвонить
             </a>
 
-            <a
-                class="telegram"
-                href="https://t.me/malugagood"
-                target="_blank">
+            <a class="telegram"
+               href="https://t.me/malugagood"
+               target="_blank">
                 ✈️ Telegram
             </a>
 
@@ -561,7 +577,6 @@
     </div>
 
 </header>
-
 
 
 <main>
@@ -576,48 +591,30 @@
         <div>
 
             <div class="badge">
-                Москва и вся Москва
+                Москва
             </div>
 
-
             <h1>
-
                 Б/У техника и
-
-                <span>
-                    ремонт на дому
-                </span>
-
+                <span>ремонт на дому</span>
             </h1>
 
-
             <p>
-
                 Продажа холодильников и стиральных машин,
                 а также ремонт бытовой техники
                 с выездом мастера по Москве.
-
             </p>
-
 
             <div class="buttons">
 
-                <a
-                    href="#products"
-                    class="btn btn-primary">
-
+                <a href="#products" class="btn btn-primary">
                     🛒 Смотреть технику
-
                 </a>
 
-
-                <a
-                    href="https://t.me/malugagood"
-                    target="_blank"
-                    class="btn btn-telegram">
-
+                <a href="https://t.me/malugagood"
+                   target="_blank"
+                   class="btn btn-telegram">
                     ✈️ Написать в Telegram
-
                 </a>
 
             </div>
@@ -629,9 +626,7 @@
 
             <div>
 
-                <div class="hero-icon">
-                    🧊
-                </div>
+                <div class="hero-icon">🧊</div>
 
                 <h3>
                     Бытовая техника<br>
@@ -647,7 +642,6 @@
 </section>
 
 
-
 <!-- SERVICES -->
 
 <section id="services">
@@ -656,9 +650,7 @@
 
         <div class="section-title">
 
-            <h2>
-                Наши услуги
-            </h2>
+            <h2>Наши услуги</h2>
 
             <p>
                 Продажа техники и профессиональный
@@ -670,16 +662,11 @@
 
         <div class="cards">
 
-
             <div class="card">
 
-                <div class="card-icon">
-                    🧊
-                </div>
+                <div class="card-icon">🧊</div>
 
-                <h3>
-                    Холодильники
-                </h3>
+                <h3>Холодильники</h3>
 
                 <p>
                     Продажа б/у холодильников
@@ -692,18 +679,13 @@
 
             <div class="card">
 
-                <div class="card-icon">
-                    🧺
-                </div>
+                <div class="card-icon">🧺</div>
 
-                <h3>
-                    Стиральные машины
-                </h3>
+                <h3>Стиральные машины</h3>
 
                 <p>
                     Б/у стиральные машины
                     по доступным ценам.
-                    Модели добавляются по мере поступления.
                 </p>
 
             </div>
@@ -711,13 +693,9 @@
 
             <div class="card">
 
-                <div class="card-icon">
-                    🔧
-                </div>
+                <div class="card-icon">🔧</div>
 
-                <h3>
-                    Ремонт на дому
-                </h3>
+                <h3>Ремонт на дому</h3>
 
                 <p>
                     Ремонт холодильников и стиральных
@@ -733,7 +711,6 @@
 </section>
 
 
-
 <!-- REPAIR -->
 
 <section id="repair" class="repair">
@@ -742,13 +719,11 @@
 
         <div class="section-title">
 
-            <h2>
-                Ремонт бытовой техники
-            </h2>
+            <h2>Ремонт бытовой техники</h2>
 
             <p>
-                Не знаете, что произошло с техникой?
-                Напишите нам — поможем разобраться.
+                Напишите нам и расскажите,
+                что произошло с вашей техникой.
             </p>
 
         </div>
@@ -756,27 +731,18 @@
 
         <div class="cards">
 
-
             <div class="card">
 
-                <div class="card-icon">
-                    🧊
-                </div>
+                <div class="card-icon">🧊</div>
 
-                <h3>
-                    Ремонт холодильников
-                </h3>
+                <h3>Ремонт холодильников</h3>
 
                 <div class="repair-list">
 
-                    <div>✓ Холодильник не морозит</div>
-
+                    <div>✓ Не морозит</div>
                     <div>✓ Не включается</div>
-
                     <div>✓ Течёт вода</div>
-
                     <div>✓ Сильно шумит</div>
-
                     <div>✓ Намерзает лёд</div>
 
                 </div>
@@ -786,24 +752,16 @@
 
             <div class="card">
 
-                <div class="card-icon">
-                    🧺
-                </div>
+                <div class="card-icon">🧺</div>
 
-                <h3>
-                    Ремонт стиральных машин
-                </h3>
+                <h3>Ремонт стиральных машин</h3>
 
                 <div class="repair-list">
 
                     <div>✓ Не включается</div>
-
                     <div>✓ Не сливает воду</div>
-
                     <div>✓ Не отжимает</div>
-
                     <div>✓ Не нагревает воду</div>
-
                     <div>✓ Сильно вибрирует</div>
 
                 </div>
@@ -813,39 +771,30 @@
 
             <div class="card">
 
-                <div class="card-icon">
-                    📱
-                </div>
+                <div class="card-icon">📱</div>
 
-                <h3>
-                    Нужен мастер?
-                </h3>
+                <h3>Вызвать мастера</h3>
 
                 <p>
-                    Напишите в Telegram и расскажите,
-                    какая техника сломалась и что произошло.
+                    Напишите в Telegram и опишите
+                    неисправность.
                 </p>
 
                 <br>
 
-                <a
-                    href="https://t.me/malugagood"
-                    target="_blank"
-                    class="product-button">
-
+                <a href="https://t.me/malugagood"
+                   target="_blank"
+                   class="product-button">
                     ✈️ Написать мастеру
-
                 </a>
 
             </div>
-
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- ADVANTAGES -->
@@ -856,9 +805,7 @@
 
         <div class="section-title">
 
-            <h2>
-                Почему выбирают нас
-            </h2>
+            <h2>Почему выбирают нас</h2>
 
             <p>
                 Стараемся сделать покупку и ремонт
@@ -870,74 +817,29 @@
 
         <div class="advantages-grid">
 
-
             <div class="advantage">
-
-                <div class="advantage-icon">
-                    🔍
-                </div>
-
-                <h3>
-                    Проверка техники
-                </h3>
-
-                <p>
-                    Техника проверяется перед продажей.
-                </p>
-
+                <div class="advantage-icon">🔍</div>
+                <h3>Проверка техники</h3>
+                <p>Техника проверяется перед продажей.</p>
             </div>
 
-
             <div class="advantage">
-
-                <div class="advantage-icon">
-                    🚗
-                </div>
-
-                <h3>
-                    Выезд по Москве
-                </h3>
-
-                <p>
-                    Мастер приедет к вам домой.
-                </p>
-
+                <div class="advantage-icon">🚗</div>
+                <h3>Выезд по Москве</h3>
+                <p>Мастер приедет к вам домой.</p>
             </div>
 
-
             <div class="advantage">
-
-                <div class="advantage-icon">
-                    💰
-                </div>
-
-                <h3>
-                    Доступные цены
-                </h3>
-
-                <p>
-                    Подберём вариант под ваш бюджет.
-                </p>
-
+                <div class="advantage-icon">💰</div>
+                <h3>Доступные цены</h3>
+                <p>Подберём вариант под ваш бюджет.</p>
             </div>
 
-
             <div class="advantage">
-
-                <div class="advantage-icon">
-                    📱
-                </div>
-
-                <h3>
-                    Telegram
-                </h3>
-
-                <p>
-                    Быстрая связь с мастером.
-                </p>
-
+                <div class="advantage-icon">📱</div>
+                <h3>Telegram</h3>
+                <p>Быстрая связь с мастером.</p>
             </div>
-
 
         </div>
 
@@ -946,55 +848,85 @@
 </section>
 
 
+<!-- CATALOG -->
 
-<!-- PRODUCTS -->
-
-<section id="products">
+<section id="products" class="catalog">
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>
-                Техника в продаже
-            </h2>
+            <h2>Техника в продаже</h2>
 
             <p>
-                Сейчас каталог готовится.
-                Скоро здесь появятся реальные товары,
-                фотографии и цены.
+                Выберите категорию техники.
+                Актуальные товары и цены будут добавляться
+                по мере поступления.
             </p>
 
         </div>
 
 
-        <div class="cards">
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <button class="filter-btn active"
+                    onclick="filterProducts('all', this)">
+                Все
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterProducts('fridge', this)">
+                🧊 Холодильники
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterProducts('washer', this)">
+                🧺 Стиральные машины
+            </button>
+
+        </div>
 
 
-            <div class="product-card">
+        <!-- PRODUCTS -->
+
+        <div class="catalog-grid">
+
+
+            <!-- FRIDGE 1 -->
+
+            <div class="product-card"
+                 data-category="fridge">
 
                 <div class="product-image">
                     🧊
                 </div>
 
-                <div class="product-content">
+                <div class="product-info">
+
+                    <div class="product-category">
+                        ХОЛОДИЛЬНИК
+                    </div>
 
                     <h3>
-                        Холодильники
+                        Товар появится скоро
                     </h3>
 
                     <p>
-                        Б/у холодильники различных
-                        марок и моделей.
+                        Фотография, марка, модель,
+                        состояние и характеристики
+                        будут добавлены после поступления.
                     </p>
 
-                    <a
-                        href="https://t.me/malugagood"
-                        target="_blank"
-                        class="product-button">
+                    <div class="product-price">
+                        Цена уточняется
+                    </div>
 
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="product-button">
                         Узнать наличие
-
                     </a>
 
                 </div>
@@ -1002,29 +934,117 @@
             </div>
 
 
-            <div class="product-card">
+            <!-- FRIDGE 2 -->
+
+            <div class="product-card"
+                 data-category="fridge">
+
+                <div class="product-image">
+                    🧊
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        ХОЛОДИЛЬНИК
+                    </div>
+
+                    <h3>
+                        Товар появится скоро
+                    </h3>
+
+                    <p>
+                        Здесь будет информация
+                        о конкретном холодильнике.
+                    </p>
+
+                    <div class="product-price">
+                        Цена уточняется
+                    </div>
+
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="product-button">
+                        Узнать наличие
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRIDGE 3 -->
+
+            <div class="product-card"
+                 data-category="fridge">
+
+                <div class="product-image">
+                    🧊
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        ХОЛОДИЛЬНИК
+                    </div>
+
+                    <h3>
+                        Товар появится скоро
+                    </h3>
+
+                    <p>
+                        Скоро здесь появится
+                        реальный товар.
+                    </p>
+
+                    <div class="product-price">
+                        Цена уточняется
+                    </div>
+
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="product-button">
+                        Узнать наличие
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- WASHER 1 -->
+
+            <div class="product-card"
+                 data-category="washer">
 
                 <div class="product-image">
                     🧺
                 </div>
 
-                <div class="product-content">
+                <div class="product-info">
+
+                    <div class="product-category">
+                        СТИРАЛЬНАЯ МАШИНА
+                    </div>
 
                     <h3>
-                        Стиральные машины
+                        Товар появится скоро
                     </h3>
 
                     <p>
-                        Проверенные стиральные машины.
+                        Фотография, марка, модель,
+                        состояние и характеристики
+                        будут добавлены после поступления.
                     </p>
 
-                    <a
-                        href="https://t.me/malugagood"
-                        target="_blank"
-                        class="product-button">
+                    <div class="product-price">
+                        Цена уточняется
+                    </div>
 
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="product-button">
                         Узнать наличие
-
                     </a>
 
                 </div>
@@ -1032,30 +1052,77 @@
             </div>
 
 
-            <div class="product-card">
+            <!-- WASHER 2 -->
+
+            <div class="product-card"
+                 data-category="washer">
 
                 <div class="product-image">
-                    🔧
+                    🧺
                 </div>
 
-                <div class="product-content">
+                <div class="product-info">
+
+                    <div class="product-category">
+                        СТИРАЛЬНАЯ МАШИНА
+                    </div>
 
                     <h3>
-                        Ремонт
+                        Товар появится скоро
                     </h3>
 
                     <p>
-                        Ремонт холодильников и стиральных
-                        машин с выездом по Москве.
+                        Здесь будет информация
+                        о конкретной стиральной машине.
                     </p>
 
-                    <a
-                        href="https://t.me/malugagood"
-                        target="_blank"
-                        class="product-button">
+                    <div class="product-price">
+                        Цена уточняется
+                    </div>
 
-                        Вызвать мастера
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="product-button">
+                        Узнать наличие
+                    </a>
 
+                </div>
+
+            </div>
+
+
+            <!-- WASHER 3 -->
+
+            <div class="product-card"
+                 data-category="washer">
+
+                <div class="product-image">
+                    🧺
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        СТИРАЛЬНАЯ МАШИНА
+                    </div>
+
+                    <h3>
+                        Товар появится скоро
+                    </h3>
+
+                    <p>
+                        Скоро здесь появится
+                        реальный товар.
+                    </p>
+
+                    <div class="product-price">
+                        Цена уточняется
+                    </div>
+
+                    <a href="https://t.me/malugagood"
+                       target="_blank"
+                       class="product-button">
+                        Узнать наличие
                     </a>
 
                 </div>
@@ -1068,7 +1135,6 @@
     </div>
 
 </section>
-
 
 
 <!-- CONTACTS -->
@@ -1089,25 +1155,16 @@
 
         </div>
 
-
         <div class="cta-buttons">
 
-            <a
-                href="tel:+79060071215"
-                class="btn">
-
+            <a href="tel:+79060071215" class="btn">
                 📞 +7 906 007-12-15
-
             </a>
 
-
-            <a
-                href="https://t.me/malugagood"
-                target="_blank"
-                class="btn btn-telegram">
-
+            <a href="https://t.me/malugagood"
+               target="_blank"
+               class="btn btn-telegram">
                 ✈️ Telegram
-
             </a>
 
         </div>
@@ -1119,9 +1176,6 @@
 
 </main>
 
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1139,7 +1193,6 @@
 
         </div>
 
-
         <div class="footer-text">
             Москва · Telegram: @malugagood
         </div>
@@ -1147,6 +1200,47 @@
     </div>
 
 </footer>
+
+
+<script>
+
+function filterProducts(category, button) {
+
+    const products =
+        document.querySelectorAll(".product-card");
+
+    const buttons =
+        document.querySelectorAll(".filter-btn");
+
+
+    buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+    });
+
+
+    button.classList.add("active");
+
+
+    products.forEach(function(product) {
+
+        if (
+            category === "all" ||
+            product.dataset.category === category
+        ) {
+
+            product.style.display = "block";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
 
 
 </body>
