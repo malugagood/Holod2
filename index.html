@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>БытМастер — Б/У техника и ремонт в Москве</title>
+    <title>БытМастер — техника и ремонт в Москве</title>
 
     <meta name="description"
-          content="Продажа б/у холодильников и стиральных машин. Ремонт бытовой техники на дому в Москве.">
+          content="БытМастер — продажа б/у холодильников и стиральных машин, ремонт бытовой техники на дому в Москве.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -35,21 +36,22 @@
 
         .container {
             width: min(1120px, 92%);
-            margin: 0 auto;
+            margin: auto;
         }
+
 
         /* HEADER */
 
         header {
-            background: #ffffff;
-            border-bottom: 1px solid #e8ebf2;
+            background: white;
+            border-bottom: 1px solid #e7eaf0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .header-inner {
-            min-height: 76px;
+            min-height: 75px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -68,7 +70,7 @@
 
         nav {
             display: flex;
-            gap: 25px;
+            gap: 24px;
             font-size: 15px;
             font-weight: 600;
         }
@@ -82,22 +84,21 @@
             gap: 8px;
         }
 
-        .phone {
-            background: #1463ff;
+        .phone,
+        .telegram {
             color: white;
             padding: 11px 15px;
-            border-radius: 10px;
+            border-radius: 9px;
             font-weight: 700;
             white-space: nowrap;
         }
 
+        .phone {
+            background: #1463ff;
+        }
+
         .telegram {
             background: #229ed9;
-            color: white;
-            padding: 11px 15px;
-            border-radius: 10px;
-            font-weight: 700;
-            white-space: nowrap;
         }
 
         .phone:hover {
@@ -108,18 +109,19 @@
             background: #1688bd;
         }
 
+
         /* HERO */
 
         .hero {
-            padding: 80px 0;
+            padding: 85px 0;
             background:
                 radial-gradient(circle at 80% 20%, #dce9ff 0, transparent 35%),
-                linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+                linear-gradient(135deg, #f8fbff, #eef4ff);
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-columns: 1.1fr .9fr;
             align-items: center;
             gap: 60px;
         }
@@ -136,7 +138,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(38px, 5vw, 62px);
+            font-size: clamp(40px, 5vw, 62px);
             line-height: 1.05;
             margin-bottom: 25px;
             letter-spacing: -1.5px;
@@ -150,21 +152,21 @@
             color: #5d6678;
             font-size: 19px;
             max-width: 650px;
-            margin-bottom: 32px;
+            margin-bottom: 30px;
         }
 
         .buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 24px;
-            border-radius: 11px;
+            padding: 15px 22px;
+            border-radius: 10px;
             font-weight: 700;
-            transition: 0.2s;
+            transition: .2s;
         }
 
         .btn-primary {
@@ -188,19 +190,19 @@
         }
 
         .hero-card {
-            min-height: 340px;
-            border-radius: 24px;
+            min-height: 350px;
+            border-radius: 25px;
             background: linear-gradient(145deg, #1463ff, #6f9dff);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            box-shadow: 0 25px 60px rgba(20, 99, 255, 0.2);
             text-align: center;
+            color: white;
+            box-shadow: 0 25px 60px rgba(20, 99, 255, .2);
             padding: 30px;
         }
 
-        .hero-card-icon {
+        .hero-icon {
             font-size: 90px;
             margin-bottom: 15px;
         }
@@ -209,6 +211,7 @@
             font-size: 25px;
         }
 
+
         /* SECTIONS */
 
         section {
@@ -216,9 +219,9 @@
         }
 
         .section-title {
-            text-align: center;
             max-width: 700px;
             margin: 0 auto 45px;
+            text-align: center;
         }
 
         .section-title h2 {
@@ -230,6 +233,7 @@
             color: #687286;
             font-size: 17px;
         }
+
 
         /* CARDS */
 
@@ -244,12 +248,12 @@
             border: 1px solid #e7eaf0;
             border-radius: 18px;
             padding: 30px;
-            transition: 0.2s;
+            transition: .2s;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(20, 35, 65, 0.08);
+            box-shadow: 0 15px 35px rgba(20, 35, 65, .08);
         }
 
         .card-icon {
@@ -265,6 +269,23 @@
         .card p {
             color: #687286;
         }
+
+
+        /* REPAIR */
+
+        .repair {
+            background: #eef4ff;
+        }
+
+        .repair-list {
+            margin-top: 18px;
+        }
+
+        .repair-list div {
+            margin: 8px 0;
+            color: #4f5a6d;
+        }
+
 
         /* ADVANTAGES */
 
@@ -298,13 +319,14 @@
             font-size: 14px;
         }
 
+
         /* PRODUCTS */
 
         .product-card {
             background: white;
+            border: 1px solid #e7eaf0;
             border-radius: 18px;
             overflow: hidden;
-            border: 1px solid #e7eaf0;
         }
 
         .product-image {
@@ -321,18 +343,16 @@
         }
 
         .product-content h3 {
-            margin-bottom: 7px;
+            margin-bottom: 8px;
         }
 
         .product-content p {
             color: #687286;
-            font-size: 14px;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
-        .contact-product {
+        .product-button {
             display: inline-block;
-            margin-top: 5px;
             background: #229ed9;
             color: white;
             padding: 10px 15px;
@@ -341,9 +361,10 @@
             font-size: 14px;
         }
 
-        .contact-product:hover {
+        .product-button:hover {
             background: #1688bd;
         }
+
 
         /* CTA */
 
@@ -365,25 +386,25 @@
         }
 
         .cta p {
-            opacity: 0.9;
+            opacity: .9;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 12px;
             flex-wrap: wrap;
+            gap: 10px;
         }
 
         .cta .btn {
             background: white;
             color: #1463ff;
-            white-space: nowrap;
         }
 
         .cta .btn-telegram {
             background: #229ed9;
             color: white;
         }
+
 
         /* FOOTER */
 
@@ -396,8 +417,8 @@
         .footer-inner {
             display: flex;
             justify-content: space-between;
-            gap: 30px;
             align-items: center;
+            gap: 25px;
         }
 
         .footer-logo {
@@ -410,6 +431,7 @@
             font-size: 14px;
         }
 
+
         /* MOBILE */
 
         @media (max-width: 900px) {
@@ -421,10 +443,6 @@
             .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 35px;
-            }
-
-            .hero {
-                padding: 55px 0;
             }
 
             .cards {
@@ -460,6 +478,10 @@
                 font-size: 13px;
             }
 
+            .hero {
+                padding: 60px 0;
+            }
+
             .hero h1 {
                 font-size: 40px;
             }
@@ -485,10 +507,15 @@
                 align-items: flex-start;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -498,22 +525,34 @@
             Быт<span>Мастер</span>
         </a>
 
+
         <nav>
+
             <a href="#services">Услуги</a>
+
+            <a href="#repair">Ремонт</a>
+
             <a href="#products">Техника</a>
+
             <a href="#advantages">Почему мы</a>
+
             <a href="#contacts">Контакты</a>
+
         </nav>
+
 
         <div class="header-buttons">
 
-            <a class="phone" href="tel:+79060071215">
+            <a
+                class="phone"
+                href="tel:+79060071215">
                 📞 Позвонить
             </a>
 
-            <a class="telegram"
-               href="https://t.me/malugagood"
-               target="_blank">
+            <a
+                class="telegram"
+                href="https://t.me/malugagood"
+                target="_blank">
                 ✈️ Telegram
             </a>
 
@@ -524,330 +563,565 @@
 </header>
 
 
+
 <main>
 
-    <!-- HERO -->
 
-    <section class="hero">
+<!-- HERO -->
 
-        <div class="container hero-grid">
+<section class="hero">
 
-            <div>
+    <div class="container hero-grid">
 
-                <div class="badge">
-                    Москва
-                </div>
+        <div>
 
-                <h1>
-                    Б/У техника и
-                    <span>ремонт на дому</span>
-                </h1>
-
-                <p>
-                    Продажа холодильников и стиральных машин,
-                    а также профессиональный ремонт бытовой техники
-                    с выездом мастера по Москве.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#products" class="btn btn-primary">
-                        🛒 Смотреть технику
-                    </a>
-
-                    <a href="https://t.me/malugagood"
-                       target="_blank"
-                       class="btn btn-telegram">
-                        ✈️ Написать в Telegram
-                    </a>
-
-                </div>
-
+            <div class="badge">
+                Москва и вся Москва
             </div>
 
 
-            <div class="hero-card">
+            <h1>
 
-                <div>
+                Б/У техника и
 
-                    <div class="hero-card-icon">
-                        🧊
-                    </div>
+                <span>
+                    ремонт на дому
+                </span>
 
-                    <h3>
-                        Бытовая техника<br>
-                        с заботой о вашем доме
-                    </h3>
+            </h1>
 
-                </div>
+
+            <p>
+
+                Продажа холодильников и стиральных машин,
+                а также ремонт бытовой техники
+                с выездом мастера по Москве.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="#products"
+                    class="btn btn-primary">
+
+                    🛒 Смотреть технику
+
+                </a>
+
+
+                <a
+                    href="https://t.me/malugagood"
+                    target="_blank"
+                    class="btn btn-telegram">
+
+                    ✈️ Написать в Telegram
+
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+
+        <div class="hero-card">
+
+            <div>
+
+                <div class="hero-icon">
+                    🧊
+                </div>
+
+                <h3>
+                    Бытовая техника<br>
+                    с заботой о вашем доме
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- SERVICES -->
 
-    <section id="services">
+<!-- SERVICES -->
 
-        <div class="container">
+<section id="services">
 
-            <div class="section-title">
+    <div class="container">
 
-                <h2>Наши услуги</h2>
+        <div class="section-title">
+
+            <h2>
+                Наши услуги
+            </h2>
+
+            <p>
+                Продажа техники и профессиональный
+                ремонт бытовых приборов.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🧊
+                </div>
+
+                <h3>
+                    Холодильники
+                </h3>
 
                 <p>
-                    Поможем купить технику или восстановить
-                    уже имеющуюся технику.
+                    Продажа б/у холодильников
+                    различных моделей.
+                    Уточняйте актуальное наличие.
                 </p>
 
             </div>
 
 
-            <div class="cards">
+            <div class="card">
 
-                <div class="card">
+                <div class="card-icon">
+                    🧺
+                </div>
 
-                    <div class="card-icon">🧊</div>
+                <h3>
+                    Стиральные машины
+                </h3>
 
-                    <h3>Холодильники</h3>
+                <p>
+                    Б/у стиральные машины
+                    по доступным ценам.
+                    Модели добавляются по мере поступления.
+                </p>
 
-                    <p>
-                        Продажа б/у холодильников.
-                        Подберём подходящую модель
-                        под ваши задачи и бюджет.
-                    </p>
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Ремонт на дому
+                </h3>
+
+                <p>
+                    Ремонт холодильников и стиральных
+                    машин с выездом мастера по Москве.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- REPAIR -->
+
+<section id="repair" class="repair">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Ремонт бытовой техники
+            </h2>
+
+            <p>
+                Не знаете, что произошло с техникой?
+                Напишите нам — поможем разобраться.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🧊
+                </div>
+
+                <h3>
+                    Ремонт холодильников
+                </h3>
+
+                <div class="repair-list">
+
+                    <div>✓ Холодильник не морозит</div>
+
+                    <div>✓ Не включается</div>
+
+                    <div>✓ Течёт вода</div>
+
+                    <div>✓ Сильно шумит</div>
+
+                    <div>✓ Намерзает лёд</div>
 
                 </div>
 
+            </div>
 
-                <div class="card">
 
-                    <div class="card-icon">🧺</div>
+            <div class="card">
 
-                    <h3>Стиральные машины</h3>
+                <div class="card-icon">
+                    🧺
+                </div>
 
-                    <p>
-                        Проверенная техника для дома
-                        по доступной цене.
-                    </p>
+                <h3>
+                    Ремонт стиральных машин
+                </h3>
+
+                <div class="repair-list">
+
+                    <div>✓ Не включается</div>
+
+                    <div>✓ Не сливает воду</div>
+
+                    <div>✓ Не отжимает</div>
+
+                    <div>✓ Не нагревает воду</div>
+
+                    <div>✓ Сильно вибрирует</div>
 
                 </div>
 
+            </div>
 
-                <div class="card">
 
-                    <div class="card-icon">🔧</div>
+            <div class="card">
 
-                    <h3>Ремонт на дому</h3>
+                <div class="card-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Нужен мастер?
+                </h3>
+
+                <p>
+                    Напишите в Telegram и расскажите,
+                    какая техника сломалась и что произошло.
+                </p>
+
+                <br>
+
+                <a
+                    href="https://t.me/malugagood"
+                    target="_blank"
+                    class="product-button">
+
+                    ✈️ Написать мастеру
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ADVANTAGES -->
+
+<section id="advantages" class="advantages">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Почему выбирают нас
+            </h2>
+
+            <p>
+                Стараемся сделать покупку и ремонт
+                максимально простыми.
+            </p>
+
+        </div>
+
+
+        <div class="advantages-grid">
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Проверка техники
+                </h3>
+
+                <p>
+                    Техника проверяется перед продажей.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">
+                    🚗
+                </div>
+
+                <h3>
+                    Выезд по Москве
+                </h3>
+
+                <p>
+                    Мастер приедет к вам домой.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Доступные цены
+                </h3>
+
+                <p>
+                    Подберём вариант под ваш бюджет.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Telegram
+                </h3>
+
+                <p>
+                    Быстрая связь с мастером.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Техника в продаже
+            </h2>
+
+            <p>
+                Сейчас каталог готовится.
+                Скоро здесь появятся реальные товары,
+                фотографии и цены.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🧊
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Холодильники
+                    </h3>
+
+                    <p>
+                        Б/у холодильники различных
+                        марок и моделей.
+                    </p>
+
+                    <a
+                        href="https://t.me/malugagood"
+                        target="_blank"
+                        class="product-button">
+
+                        Узнать наличие
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🧺
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Стиральные машины
+                    </h3>
+
+                    <p>
+                        Проверенные стиральные машины.
+                    </p>
+
+                    <a
+                        href="https://t.me/malugagood"
+                        target="_blank"
+                        class="product-button">
+
+                        Узнать наличие
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🔧
+                </div>
+
+                <div class="product-content">
+
+                    <h3>
+                        Ремонт
+                    </h3>
 
                     <p>
                         Ремонт холодильников и стиральных
-                        машин с выездом мастера по Москве.
+                        машин с выездом по Москве.
                     </p>
 
+                    <a
+                        href="https://t.me/malugagood"
+                        target="_blank"
+                        class="product-button">
+
+                        Вызвать мастера
+
+                    </a>
+
                 </div>
 
             </div>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ADVANTAGES -->
 
-    <section id="advantages" class="advantages">
+<!-- CONTACTS -->
 
-        <div class="container">
+<section id="contacts" class="cta">
 
-            <div class="section-title">
+    <div class="container cta-box">
 
-                <h2>Почему выбирают нас</h2>
+        <div>
 
-                <p>
-                    Сделаем покупку и ремонт техники
-                    максимально простыми.
-                </p>
+            <h2>
+                Нужна техника или ремонт?
+            </h2>
 
-            </div>
-
-
-            <div class="advantages-grid">
-
-                <div class="advantage">
-                    <div class="advantage-icon">🔍</div>
-                    <h3>Проверка техники</h3>
-                    <p>Техника проверяется перед продажей.</p>
-                </div>
-
-                <div class="advantage">
-                    <div class="advantage-icon">🚗</div>
-                    <h3>Выезд по Москве</h3>
-                    <p>Мастер приедет прямо к вам домой.</p>
-                </div>
-
-                <div class="advantage">
-                    <div class="advantage-icon">💰</div>
-                    <h3>Доступные цены</h3>
-                    <p>Поможем подобрать технику под бюджет.</p>
-                </div>
-
-                <div class="advantage">
-                    <div class="advantage-icon">📱</div>
-                    <h3>Связь в Telegram</h3>
-                    <p>Можно быстро связаться с нами онлайн.</p>
-                </div>
-
-            </div>
+            <p>
+                Позвоните или напишите нам в Telegram.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="cta-buttons">
+
+            <a
+                href="tel:+79060071215"
+                class="btn">
+
+                📞 +7 906 007-12-15
+
+            </a>
 
 
-    <!-- PRODUCTS -->
+            <a
+                href="https://t.me/malugagood"
+                target="_blank"
+                class="btn btn-telegram">
 
-    <section id="products">
+                ✈️ Telegram
 
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Техника в продаже</h2>
-
-                <p>
-                    Здесь будут размещаться актуальные модели,
-                    фотографии и цены.
-                </p>
-
-            </div>
-
-
-            <div class="cards">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        🧊
-                    </div>
-
-                    <div class="product-content">
-
-                        <h3>Холодильники</h3>
-
-                        <p>
-                            Б/У холодильники различных моделей.
-                            Уточняйте наличие и цену.
-                        </p>
-
-                        <a href="https://t.me/malugagood"
-                           target="_blank"
-                           class="contact-product">
-                            Узнать о наличии
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        🧺
-                    </div>
-
-                    <div class="product-content">
-
-                        <h3>Стиральные машины</h3>
-
-                        <p>
-                            Проверенные стиральные машины.
-                            Уточняйте актуальные модели.
-                        </p>
-
-                        <a href="https://t.me/malugagood"
-                           target="_blank"
-                           class="contact-product">
-                            Узнать о наличии
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="product-card">
-
-                    <div class="product-image">
-                        🔧
-                    </div>
-
-                    <div class="product-content">
-
-                        <h3>Ремонт техники</h3>
-
-                        <p>
-                            Ремонт холодильников и стиральных
-                            машин с выездом мастера.
-                        </p>
-
-                        <a href="https://t.me/malugagood"
-                           target="_blank"
-                           class="contact-product">
-                            Написать мастеру
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
+            </a>
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- CTA -->
-
-    <section id="contacts" class="cta">
-
-        <div class="container cta-box">
-
-            <div>
-
-                <h2>Нужна техника или ремонт?</h2>
-
-                <p>
-                    Позвоните или напишите нам в Telegram.
-                </p>
-
-            </div>
-
-            <div class="cta-buttons">
-
-                <a href="tel:+79060071215" class="btn">
-                    📞 +7 906 007-12-15
-                </a>
-
-                <a href="https://t.me/malugagood"
-                   target="_blank"
-                   class="btn btn-telegram">
-                    ✈️ Telegram
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
 
 </main>
 
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -865,6 +1139,7 @@
 
         </div>
 
+
         <div class="footer-text">
             Москва · Telegram: @malugagood
         </div>
@@ -872,6 +1147,7 @@
     </div>
 
 </footer>
+
 
 </body>
 </html>
