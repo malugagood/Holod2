@@ -1,0 +1,801 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>БытМастер — Б/У техника и ремонт в Москве</title>
+
+    <meta name="description"
+          content="Продажа б/у холодильников и стиральных машин. Ремонт бытовой техники на дому в Москве.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #172033;
+            background: #f5f7fb;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8ebf2;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #1463ff;
+        }
+
+        .logo span {
+            color: #172033;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #1463ff;
+        }
+
+        .phone {
+            background: #1463ff;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .phone:hover {
+            background: #0d50d5;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 80px 0;
+            background:
+                radial-gradient(circle at 80% 20%, #dce9ff 0, transparent 35%),
+                linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e3edff;
+            color: #1463ff;
+            padding: 8px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: #1463ff;
+        }
+
+        .hero p {
+            color: #5d6678;
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 24px;
+            border-radius: 11px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #1463ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0d50d5;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            border: 1px solid #d9dfeb;
+        }
+
+        .btn-secondary:hover {
+            border-color: #1463ff;
+            color: #1463ff;
+        }
+
+        .hero-card {
+            min-height: 340px;
+            border-radius: 24px;
+            background: linear-gradient(145deg, #1463ff, #6f9dff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 25px 60px rgba(20, 99, 255, 0.2);
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero-card-icon {
+            font-size: 90px;
+            margin-bottom: 15px;
+        }
+
+        .hero-card h3 {
+            font-size: 25px;
+        }
+
+        /* SERVICES */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #687286;
+            font-size: 17px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e7eaf0;
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(20, 35, 65, 0.08);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #687286;
+        }
+
+        /* ADVANTAGES */
+
+        .advantages {
+            background: white;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .advantage {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .advantage-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .advantage h3 {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        .advantage p {
+            color: #687286;
+            font-size: 14px;
+        }
+
+        /* PRODUCTS */
+
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid #e7eaf0;
+        }
+
+        .product-image {
+            height: 190px;
+            background: linear-gradient(135deg, #eaf1ff, #d9e6ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+        }
+
+        .product-content {
+            padding: 22px;
+        }
+
+        .product-content h3 {
+            margin-bottom: 7px;
+        }
+
+        .product-content p {
+            color: #687286;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 21px;
+            font-weight: 800;
+            color: #1463ff;
+        }
+
+        .coming {
+            text-align: center;
+            color: #687286;
+            margin-top: 25px;
+            font-size: 15px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #1463ff;
+            color: white;
+        }
+
+        .cta-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .cta p {
+            opacity: 0.9;
+        }
+
+        .cta .btn {
+            background: white;
+            color: #1463ff;
+            white-space: nowrap;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 35px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .footer-text {
+            color: #9ca6b7;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+            nav {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .advantages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .phone {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .advantages-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            Быт<span>Мастер</span>
+        </a>
+
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#products">Техника</a>
+            <a href="#advantages">Почему мы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="phone" href="tel:+79060071215">
+            📞 +7 906 007-12-15
+        </a>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container hero-grid">
+
+            <div>
+
+                <div class="badge">
+                    Москва и вся территория Москвы
+                </div>
+
+                <h1>
+                    Б/У техника и
+                    <span>ремонт на дому</span>
+                </h1>
+
+                <p>
+                    Продажа проверенных холодильников и стиральных машин,
+                    а также профессиональный ремонт бытовой техники
+                    с выездом на дом.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#products" class="btn btn-primary">
+                        🛒 Смотреть технику
+                    </a>
+
+                    <a href="tel:+79060071215" class="btn btn-secondary">
+                        🔧 Вызвать мастера
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div>
+                    <div class="hero-card-icon">🧊</div>
+
+                    <h3>
+                        Бытовая техника<br>
+                        с заботой о вашем доме
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Наши услуги</h2>
+
+                <p>
+                    Поможем купить технику или восстановить
+                    уже имеющуюся технику дома.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">🧊</div>
+
+                    <h3>Холодильники</h3>
+
+                    <p>
+                        Продажа б/у холодильников.
+                        Подберём подходящую модель
+                        под ваши задачи и бюджет.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🧺</div>
+
+                    <h3>Стиральные машины</h3>
+
+                    <p>
+                        Проверенная техника для дома
+                        по доступной цене.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🔧</div>
+
+                    <h3>Ремонт на дому</h3>
+
+                    <p>
+                        Ремонт холодильников и стиральных
+                        машин с выездом мастера по Москве.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADVANTAGES -->
+
+    <section id="advantages" class="advantages">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Почему выбирают нас</h2>
+
+                <p>
+                    Наша задача — сделать покупку и ремонт
+                    техники максимально простыми.
+                </p>
+
+            </div>
+
+
+            <div class="advantages-grid">
+
+                <div class="advantage">
+                    <div class="advantage-icon">🔍</div>
+                    <h3>Проверенная техника</h3>
+                    <p>Перед продажей техника проверяется.</p>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage-icon">🚗</div>
+                    <h3>Выезд по Москве</h3>
+                    <p>Мастер приедет прямо к вам домой.</p>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage-icon">💰</div>
+                    <h3>Доступные цены</h3>
+                    <p>Б/У техника помогает экономить бюджет.</p>
+                </div>
+
+                <div class="advantage">
+                    <div class="advantage-icon">📞</div>
+                    <h3>Всегда на связи</h3>
+                    <p>Позвоните нам для консультации.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section id="products">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Техника в продаже</h2>
+
+                <p>
+                    Здесь будут размещаться актуальные модели,
+                    фотографии и цены.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        🧊
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Холодильники</h3>
+
+                        <p>
+                            Б/У холодильники различных моделей.
+                            Фотографии и цены скоро появятся.
+                        </p>
+
+                        <div class="product-price">
+                            От 5 000 ₽
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        🧺
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Стиральные машины</h3>
+
+                        <p>
+                            Проверенные стиральные машины.
+                            Актуальные модели добавим сюда.
+                        </p>
+
+                        <div class="product-price">
+                            От 5 000 ₽
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card">
+
+                    <div class="product-image">
+                        🔧
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Ремонт техники</h3>
+
+                        <p>
+                            Ремонт холодильников и стиральных
+                            машин с выездом мастера.
+                        </p>
+
+                        <div class="product-price">
+                            По телефону
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="coming">
+                * Цены указаны как пример и будут заменены
+                на актуальные предложения.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section id="contacts" class="cta">
+
+        <div class="container cta-box">
+
+            <div>
+
+                <h2>Нужна техника или ремонт?</h2>
+
+                <p>
+                    Позвоните нам — проконсультируем и поможем решить вопрос.
+                </p>
+
+            </div>
+
+            <a href="tel:+79060071215" class="btn">
+                📞 +7 906 007-12-15
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+                БытМастер
+            </div>
+
+            <div class="footer-text">
+                Б/У бытовая техника и ремонт на дому
+            </div>
+
+        </div>
+
+        <div class="footer-text">
+            Москва
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
