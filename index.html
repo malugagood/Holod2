@@ -2,15 +2,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>БытМастер — б/у техника и ремонт в Москве</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+БытМастер — б/у техника и ремонт в Москве
+</title>
 
 <meta name="description"
-content="Продажа б/у холодильников и стиральных машин. Ремонт холодильников и стиральных машин на дому по Москве.">
+content="Продажа б/у холодильников и стиральных машин. Ремонт бытовой техники на дому по Москве.">
 
 <style>
+
+/* =========================
+   RESET
+========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -38,29 +48,44 @@ a {
     margin: auto;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: rgba(255,255,255,.96);
+
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid #e5e9f0;
+
+    border-bottom:
+        1px solid #e5e9f0;
 }
 
 .header {
     min-height: 74px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 20px;
 }
 
 .logo {
     font-size: 25px;
+
     font-weight: 900;
+
     color: #1769ff;
+
+    white-space: nowrap;
 }
 
 .logo span {
@@ -69,8 +94,11 @@ header {
 
 nav {
     display: flex;
-    gap: 24px;
+
+    gap: 22px;
+
     font-size: 14px;
+
     font-weight: 700;
 }
 
@@ -80,15 +108,20 @@ nav a:hover {
 
 .header-buttons {
     display: flex;
+
     gap: 8px;
 }
 
 .phone,
 .telegram {
     padding: 10px 14px;
+
     border-radius: 9px;
+
     color: white;
+
     font-weight: 700;
+
     font-size: 14px;
 }
 
@@ -100,37 +133,65 @@ nav a:hover {
     background: #229ed9;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     padding: 90px 0;
+
     background:
-        radial-gradient(circle at 85% 10%, #dce9ff 0, transparent 35%),
-        linear-gradient(135deg, #ffffff, #eef4ff);
+        radial-gradient(
+            circle at 85% 10%,
+            #dce9ff 0,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef4ff
+        );
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
     gap: 60px;
+
     align-items: center;
 }
 
 .badge {
     display: inline-block;
+
     padding: 8px 15px;
+
     background: #e4edff;
+
     color: #1769ff;
+
     border-radius: 30px;
+
     font-size: 14px;
+
     font-weight: 700;
+
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(40px, 6vw, 64px);
+    font-size:
+        clamp(40px, 6vw, 64px);
+
     line-height: 1.03;
+
     letter-spacing: -2px;
+
     margin-bottom: 22px;
 }
 
@@ -140,25 +201,37 @@ nav a:hover {
 
 .hero-text {
     max-width: 650px;
+
     color: #606b7e;
+
     font-size: 19px;
+
     margin-bottom: 30px;
 }
 
 .buttons {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 11px;
 }
 
 .btn {
     display: inline-flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 7px;
+
     padding: 14px 20px;
+
     border-radius: 10px;
+
     font-weight: 800;
+
     transition: .2s;
 }
 
@@ -168,48 +241,73 @@ nav a:hover {
 
 .blue {
     background: #1769ff;
+
     color: white;
 }
 
 .tg {
     background: #229ed9;
+
     color: white;
 }
 
 .white {
     background: white;
+
     color: #1769ff;
 }
 
 .hero-card {
     min-height: 390px;
+
     border-radius: 30px;
+
     padding: 35px;
+
     color: white;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
-    background: linear-gradient(145deg, #1769ff, #75a0ff);
-    box-shadow: 0 25px 60px rgba(23,105,255,.22);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1769ff,
+            #75a0ff
+        );
+
+    box-shadow:
+        0 25px 60px
+        rgba(23,105,255,.22);
 }
 
 .hero-icons {
     font-size: 90px;
+
     margin-bottom: 18px;
 }
 
 .hero-card h2 {
     font-size: 29px;
+
     line-height: 1.2;
 }
 
 .hero-card p {
     margin-top: 12px;
+
     opacity: .9;
 }
 
-/* GENERAL */
+
+/* =========================
+   GENERAL
+========================= */
 
 section {
     padding: 80px 0;
@@ -217,13 +315,18 @@ section {
 
 .section-title {
     max-width: 700px;
-    margin: 0 auto 45px;
+
+    margin:
+        0 auto 45px;
+
     text-align: center;
 }
 
 .section-title h2 {
     font-size: 38px;
+
     line-height: 1.15;
+
     margin-bottom: 12px;
 }
 
@@ -231,7 +334,10 @@ section {
     color: #687386;
 }
 
-/* ACTIONS */
+
+/* =========================
+   ACTIONS
+========================= */
 
 .actions {
     background: white;
@@ -239,40 +345,66 @@ section {
 
 .action-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 20px;
 }
 
 .action {
     padding: 32px;
+
     border-radius: 20px;
+
     color: white;
+
     min-height: 240px;
 }
 
 .action h3 {
     font-size: 24px;
+
     margin-bottom: 10px;
 }
 
 .action p {
     opacity: .92;
+
     margin-bottom: 25px;
 }
 
 .buy {
-    background: linear-gradient(135deg, #1769ff, #5488ff);
+    background:
+        linear-gradient(
+            135deg,
+            #1769ff,
+            #5488ff
+        );
 }
 
 .repair {
-    background: linear-gradient(135deg, #07856b, #18b890);
+    background:
+        linear-gradient(
+            135deg,
+            #07856b,
+            #18b890
+        );
 }
 
 .sell {
-    background: linear-gradient(135deg, #e47718, #f4a045);
+    background:
+        linear-gradient(
+            135deg,
+            #e47718,
+            #f4a045
+        );
 }
 
-/* SERVICES */
+
+/* =========================
+   SERVICES
+========================= */
 
 .services {
     background: #f5f7fb;
@@ -280,24 +412,33 @@ section {
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 20px;
 }
 
 .service {
     background: white;
+
     padding: 30px;
+
     border-radius: 18px;
-    border: 1px solid #e4e8ef;
+
+    border:
+        1px solid #e4e8ef;
 }
 
 .icon {
     font-size: 46px;
+
     margin-bottom: 15px;
 }
 
 .service h3 {
     font-size: 22px;
+
     margin-bottom: 9px;
 }
 
@@ -305,7 +446,10 @@ section {
     color: #687386;
 }
 
-/* REPAIR */
+
+/* =========================
+   REPAIR
+========================= */
 
 .repair-section {
     background: #eef4ff;
@@ -313,19 +457,27 @@ section {
 
 .repair-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 20px;
 }
 
 .repair-box {
     background: white;
+
     padding: 30px;
+
     border-radius: 18px;
-    border: 1px solid #dfe6f1;
+
+    border:
+        1px solid #dfe6f1;
 }
 
 .repair-box h3 {
     font-size: 21px;
+
     margin-bottom: 15px;
 }
 
@@ -335,49 +487,248 @@ section {
 
 .repair-box li {
     padding: 6px 0;
+
     color: #596478;
 }
 
 .repair-box li::before {
     content: "✓";
+
     color: #1769ff;
+
     font-weight: 900;
+
     margin-right: 8px;
 }
 
-/* CATALOG */
+
+/* =========================
+   CATALOG
+========================= */
 
 .catalog {
     background: white;
 }
 
-.catalog-box {
-    max-width: 850px;
-    margin: auto;
-    padding: 50px 30px;
-    text-align: center;
-    border-radius: 24px;
-    background: #f5f7fb;
-    border: 1px solid #e3e8f0;
+.filters {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
 }
 
-.catalog-icon {
-    font-size: 70px;
+.filter-btn {
+    border: 1px solid #dce2ec;
+
+    background: white;
+
+    color: #4f5b70;
+
+    padding: 11px 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #1769ff;
+
+    border-color: #1769ff;
+
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 22px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    background: white;
+
+    border:
+        1px solid #e1e6ee;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(20,35,65,.05);
+
+    transition: .2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(20,35,65,.10);
+}
+
+.product-image {
+    height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf3ff,
+            #dce8ff
+        );
+
+    font-size: 75px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-type {
+    color: #1769ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+.product-description {
+    color: #687386;
+
+    font-size: 14px;
+
+    min-height: 45px;
+
     margin-bottom: 15px;
 }
 
-.catalog-box h3 {
-    font-size: 28px;
-    margin-bottom: 12px;
+.product-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
 }
 
-.catalog-box p {
-    max-width: 650px;
-    margin: 0 auto 25px;
+.product-price {
+    font-size: 21px;
+
+    font-weight: 900;
+}
+
+.product-status {
+    color: #07856b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.product-button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 16px;
+
+    text-align: center;
+
+    padding: 11px;
+
+    border-radius: 9px;
+
+    background: #229ed9;
+
+    color: white;
+
+    font-weight: 700;
+}
+
+.product-button:hover {
+    background: #1689bd;
+}
+
+
+/* EMPTY CATALOG */
+
+.empty-catalog {
+    display: none;
+
+    max-width: 750px;
+
+    margin: 25px auto 0;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    background: #f5f7fb;
+
+    border-radius: 20px;
+
+    border:
+        1px solid #e2e7ef;
+}
+
+.empty-catalog .big-icon {
+    font-size: 65px;
+
+    margin-bottom: 10px;
+}
+
+.empty-catalog h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.empty-catalog p {
     color: #687386;
+
+    margin-bottom: 20px;
 }
 
-/* SELL */
+
+/* =========================
+   SELL
+========================= */
 
 .sell-section {
     background: #f5f7fb;
@@ -385,16 +736,24 @@ section {
 
 .sell-info {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 20px;
 }
 
 .sell-info-box {
     background: white;
+
     padding: 30px;
+
     border-radius: 18px;
+
     text-align: center;
-    border: 1px solid #e3e8f0;
+
+    border:
+        1px solid #e3e8f0;
 }
 
 .sell-info-box h3 {
@@ -405,7 +764,10 @@ section {
     color: #687386;
 }
 
-/* ADVANTAGES */
+
+/* =========================
+   ADVANTAGES
+========================= */
 
 .advantages {
     background: white;
@@ -413,42 +775,62 @@ section {
 
 .advantages-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap: 15px;
 }
 
 .advantage {
     text-align: center;
+
     padding: 20px;
 }
 
 .advantage-icon {
     font-size: 38px;
+
     margin-bottom: 10px;
 }
 
 .advantage p {
     color: #687386;
+
     font-size: 14px;
 }
 
-/* CTA */
+
+/* =========================
+   CTA
+========================= */
 
 .cta {
-    background: linear-gradient(135deg, #1769ff, #285fe2);
+    background:
+        linear-gradient(
+            135deg,
+            #1769ff,
+            #285fe2
+        );
+
     color: white;
 }
 
 .cta-inner {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 30px;
 }
 
 .cta h2 {
     font-size: 36px;
+
     line-height: 1.2;
+
     margin-bottom: 8px;
 }
 
@@ -458,37 +840,51 @@ section {
 
 .cta-buttons {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 10px;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #111827;
+
     color: white;
+
     padding: 35px 0;
 }
 
 .footer {
     display: flex;
+
     justify-content: space-between;
+
     gap: 25px;
 }
 
 .footer-logo {
     font-size: 22px;
+
     font-weight: 900;
 }
 
 .footer-text {
     color: #9ba5b6;
+
     font-size: 14px;
 }
 
-/* MOBILE */
 
-@media (max-width: 950px) {
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:950px) {
 
     nav {
         display: none;
@@ -501,21 +897,25 @@ footer {
     .action-grid,
     .service-grid,
     .repair-grid,
-    .sell-info {
+    .sell-info,
+    .products-grid {
         grid-template-columns: 1fr;
     }
 
     .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .cta-inner {
         flex-direction: column;
+
         align-items: flex-start;
     }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width:600px) {
 
     .header {
         min-height: 66px;
@@ -558,7 +958,8 @@ footer {
     }
 
     .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .cta h2 {
@@ -568,80 +969,161 @@ footer {
     .footer {
         flex-direction: column;
     }
+
+    .product-image {
+        height: 190px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
 <div class="container header">
 
-<a href="#top" class="logo">
+<a href="#top"
+class="logo">
+
 Быт<span>Мастер</span>
+
 </a>
 
+
 <nav>
-<a href="#services">Услуги</a>
-<a href="#repair">Ремонт</a>
-<a href="#products">Техника</a>
-<a href="#sell">Продать</a>
-<a href="#contacts">Контакты</a>
+
+<a href="#services">
+Услуги
+</a>
+
+<a href="#repair">
+Ремонт
+</a>
+
+<a href="#products">
+Техника
+</a>
+
+<a href="#sell">
+Продать
+</a>
+
+<a href="#contacts">
+Контакты
+</a>
+
 </nav>
 
+
 <div class="header-buttons">
-<a href="tel:+79060071215" class="phone">📞 Позвонить</a>
-<a href="https://t.me/malugagood" target="_blank" class="telegram">✈️ Telegram</a>
+
+<a href="tel:+79060071215"
+class="phone">
+
+📞 Позвонить
+
+</a>
+
+
+<a href="https://t.me/malugagood"
+target="_blank"
+class="telegram">
+
+✈️ Telegram
+
+</a>
+
 </div>
 
 </div>
+
 </header>
+
 
 
 <main id="top">
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div class="container hero-grid">
 
+
 <div>
 
 <div class="badge">
+
 📍 Работаем по всей Москве
+
 </div>
 
+
 <h1>
+
 Б/У техника<br>
-<span>и ремонт на дому</span>
+
+<span>
+и ремонт на дому
+</span>
+
 </h1>
 
+
 <p class="hero-text">
-Продаём б/у холодильники и стиральные машины,
-а также ремонтируем бытовую технику
-с выездом мастера по Москве.
+
+Продаём б/у холодильники
+и стиральные машины,
+а также ремонтируем бытовую
+технику с выездом мастера
+по Москве.
+
 </p>
+
 
 <div class="buttons">
 
-<a href="#products" class="btn blue">
+<a href="#products"
+class="btn blue">
+
 🛒 Купить технику
+
 </a>
 
-<a href="#repair" class="btn blue">
+
+<a href="#repair"
+class="btn blue">
+
 🔧 Заказать ремонт
+
 </a>
 
-<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20узнать%20о%20технике%20и%20услугах."
+
+<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20узнать%20о%20технике%20и%20ремонте."
 target="_blank"
 class="btn tg">
-✈️ Написать в Telegram
+
+✈️ Написать
+
 </a>
 
 </div>
 
 </div>
+
 
 
 <div class="hero-card">
@@ -653,8 +1135,10 @@ class="btn tg">
 </div>
 
 <h2>
+
 Холодильники<br>
 и стиральные машины
+
 </h2>
 
 <p>
@@ -665,16 +1149,21 @@ class="btn tg">
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ACTIONS -->
+
+<!-- =========================
+     ACTIONS
+========================= -->
 
 <section class="actions">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -683,14 +1172,16 @@ class="btn tg">
 </h2>
 
 <p>
-Выберите нужный вариант — мы быстро
-сориентируем вас по технике или ремонту.
+Выберите нужный вариант —
+мы быстро сориентируем вас.
 </p>
 
 </div>
 
 
+
 <div class="action-grid">
+
 
 <div class="action buy">
 
@@ -699,17 +1190,20 @@ class="btn tg">
 </h3>
 
 <p>
-Б/У холодильники и стиральные машины.
-Узнайте, что есть в наличии прямо сейчас.
+Б/У холодильники и стиральные
+машины. Узнайте актуальное
+наличие.
 </p>
 
-<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20купить%20б%2Fу%20технику.%20Что%20есть%20в%20наличии%3F"
-target="_blank"
+<a href="#products"
 class="btn white">
-Узнать наличие
+
+Смотреть каталог
+
 </a>
 
 </div>
+
 
 
 <div class="action repair">
@@ -719,17 +1213,21 @@ class="btn white">
 </h3>
 
 <p>
-Ремонт холодильников и стиральных машин
-с выездом мастера на дом.
+Ремонт холодильников
+и стиральных машин
+на дому.
 </p>
 
 <a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20заказать%20ремонт%20бытовой%20техники.%20Нужен%20мастер."
 target="_blank"
 class="btn white">
+
 Вызвать мастера
+
 </a>
 
 </div>
+
 
 
 <div class="action sell">
@@ -739,28 +1237,37 @@ class="btn white">
 </h3>
 
 <p>
-Есть холодильник или стиральная машина?
-Расскажите нам о своей технике.
+Есть холодильник или стиральная
+машина? Предложите её нам.
 </p>
 
-<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20продать%20вам%20б%2Fу%20технику.%20Как%20можно%20предложить%3F"
-target="_blank"
+<a href="#sell"
 class="btn white">
-Предложить технику
+
+Подробнее
+
 </a>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
-<!-- SERVICES -->
 
-<section id="services" class="services">
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services"
+class="services">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -769,7 +1276,8 @@ class="btn white">
 </h2>
 
 <p>
-Основные направления работы БытМастер.
+Продажа б/у техники и ремонт
+бытовых приборов по Москве.
 </p>
 
 </div>
@@ -777,66 +1285,85 @@ class="btn white">
 
 <div class="service-grid">
 
+
 <div class="service">
 
-<div class="icon">🧊</div>
+<div class="icon">
+🧊
+</div>
 
 <h3>
 Холодильники
 </h3>
 
 <p>
-Продажа б/у холодильников различных
-марок и моделей. Актуальное наличие
-уточняйте в Telegram.
+Продажа б/у холодильников
+различных марок и моделей.
+Актуальное наличие уточняйте
+в Telegram.
 </p>
 
 </div>
 
 
+
 <div class="service">
 
-<div class="icon">🧺</div>
+<div class="icon">
+🧺
+</div>
 
 <h3>
 Стиральные машины
 </h3>
 
 <p>
-Б/У стиральные машины по доступным
-ценам. Новые варианты добавляются
+Б/У стиральные машины
+по доступным ценам.
+Новые варианты добавляются
 по мере поступления.
 </p>
 
 </div>
 
 
+
 <div class="service">
 
-<div class="icon">🔧</div>
+<div class="icon">
+🔧
+</div>
 
 <h3>
 Ремонт на дому
 </h3>
 
 <p>
-Ремонт холодильников и стиральных
-машин с выездом мастера
-по Москве.
+Ремонт холодильников
+и стиральных машин
+с выездом мастера.
 </p>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
-<!-- REPAIR -->
 
-<section id="repair" class="repair-section">
+<!-- =========================
+     REPAIR
+========================= -->
+
+<section id="repair"
+class="repair-section">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -845,8 +1372,9 @@ class="btn white">
 </h2>
 
 <p>
-Если техника перестала нормально работать —
-напишите нам и расскажите о проблеме.
+Расскажите о неисправности —
+обсудим возможность ремонта
+и выезда мастера.
 </p>
 
 </div>
@@ -854,75 +1382,129 @@ class="btn white">
 
 <div class="repair-grid">
 
+
 <div class="repair-box">
 
-<div class="icon">🧊</div>
+<div class="icon">
+🧊
+</div>
 
 <h3>
 Холодильники
 </h3>
 
 <ul>
-<li>Не морозит</li>
-<li>Не включается</li>
-<li>Течёт вода</li>
-<li>Сильно шумит</li>
-<li>Намерзает лёд</li>
+
+<li>
+Не морозит
+</li>
+
+<li>
+Не включается
+</li>
+
+<li>
+Течёт вода
+</li>
+
+<li>
+Сильно шумит
+</li>
+
+<li>
+Намерзает лёд
+</li>
+
 </ul>
 
 </div>
 
 
+
 <div class="repair-box">
 
-<div class="icon">🧺</div>
+<div class="icon">
+🧺
+</div>
 
 <h3>
 Стиральные машины
 </h3>
 
 <ul>
-<li>Не включается</li>
-<li>Не сливает воду</li>
-<li>Не отжимает</li>
-<li>Не нагревает воду</li>
-<li>Сильно вибрирует</li>
+
+<li>
+Не включается
+</li>
+
+<li>
+Не сливает воду
+</li>
+
+<li>
+Не отжимает
+</li>
+
+<li>
+Не нагревает воду
+</li>
+
+<li>
+Сильно вибрирует
+</li>
+
 </ul>
 
 </div>
 
 
+
 <div class="repair-box">
 
-<div class="icon">📱</div>
+<div class="icon">
+📱
+</div>
 
 <h3>
 Нужен мастер?
 </h3>
 
 <p style="color:#687386;margin-bottom:20px;">
-Напишите в Telegram, какая техника
-сломалась и что произошло.
+
+Напишите в Telegram,
+какая техника сломалась
+и что произошло.
+
 </p>
 
 <a href="https://t.me/malugagood?text=Здравствуйте!%20Нужен%20мастер%20по%20ремонту.%20Техника:%20"
 target="_blank"
 class="btn tg">
+
 ✈️ Написать мастеру
+
 </a>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
-<!-- PRODUCTS -->
 
-<section id="products" class="catalog">
+<!-- =========================
+     CATALOG
+========================= -->
+
+<section id="products"
+class="catalog">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -931,47 +1513,317 @@ class="btn tg">
 </h2>
 
 <p>
-Здесь будем размещать реальные холодильники
-и стиральные машины с фотографиями,
-характеристиками и ценами.
+Выберите категорию, чтобы посмотреть
+доступные варианты.
 </p>
 
 </div>
 
 
-<div class="catalog-box">
+<!-- FILTERS -->
 
-<div class="catalog-icon">
-🧊 🧺
+<div class="filters">
+
+<button
+class="filter-btn active"
+data-filter="all">
+
+Все
+
+</button>
+
+
+<button
+class="filter-btn"
+data-filter="fridge">
+
+🧊 Холодильники
+
+</button>
+
+
+<button
+class="filter-btn"
+data-filter="washer">
+
+🧺 Стиральные машины
+
+</button>
+
 </div>
 
-<h3>
-Каталог скоро пополнится
+
+
+<!-- PRODUCTS -->
+
+<div class="products-grid"
+id="productsGrid">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card"
+data-category="fridge">
+
+<div class="product-image">
+
+🧊
+
+</div>
+
+<div class="product-info">
+
+<div class="product-type">
+Холодильник
+</div>
+
+<h3 class="product-title">
+Товар скоро появится
 </h3>
 
-<p>
-Фотографий техники пока нет.
-Пока можно написать нам в Telegram
-и узнать, что есть в наличии сейчас.
+<p class="product-description">
+
+Здесь будет фотография,
+марка, модель и описание
+реального холодильника.
+
 </p>
 
-<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20узнать%20актуальное%20наличие%20холодильников%20и%20стиральных%20машин."
+<div class="product-bottom">
+
+<div class="product-price">
+Цена уточняется
+</div>
+
+<div class="product-status">
+● Скоро
+</div>
+
+</div>
+
+<a href="https://t.me/malugagood?text=Здравствуйте!%20Интересуют%20холодильники.%20Что%20есть%20в%20наличии%3F"
 target="_blank"
-class="btn tg">
-✈️ Узнать наличие
+class="product-button">
+
+Узнать наличие
+
 </a>
 
 </div>
 
 </div>
+
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card"
+data-category="washer">
+
+<div class="product-image">
+
+🧺
+
+</div>
+
+<div class="product-info">
+
+<div class="product-type">
+Стиральная машина
+</div>
+
+<h3 class="product-title">
+Товар скоро появится
+</h3>
+
+<p class="product-description">
+
+Здесь будет фотография,
+марка, модель и описание
+реальной стиральной машины.
+
+</p>
+
+<div class="product-bottom">
+
+<div class="product-price">
+Цена уточняется
+</div>
+
+<div class="product-status">
+● Скоро
+</div>
+
+</div>
+
+<a href="https://t.me/malugagood?text=Здравствуйте!%20Интересуют%20стиральные%20машины.%20Что%20есть%20в%20наличии%3F"
+target="_blank"
+class="product-button">
+
+Узнать наличие
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card"
+data-category="fridge">
+
+<div class="product-image">
+
+🧊
+
+</div>
+
+<div class="product-info">
+
+<div class="product-type">
+Холодильник
+</div>
+
+<h3 class="product-title">
+Новый товар скоро
+</h3>
+
+<p class="product-description">
+
+Карточка готова для добавления
+реального товара и фотографии.
+
+</p>
+
+<div class="product-bottom">
+
+<div class="product-price">
+Цена уточняется
+</div>
+
+<div class="product-status">
+● Скоро
+</div>
+
+</div>
+
+<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20узнать%20наличие%20холодильников."
+target="_blank"
+class="product-button">
+
+Узнать наличие
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card"
+data-category="washer">
+
+<div class="product-image">
+
+🧺
+
+</div>
+
+<div class="product-info">
+
+<div class="product-type">
+Стиральная машина
+</div>
+
+<h3 class="product-title">
+Новый товар скоро
+</h3>
+
+<p class="product-description">
+
+Карточка готова для добавления
+реального товара и фотографии.
+
+</p>
+
+<div class="product-bottom">
+
+<div class="product-price">
+Цена уточняется
+</div>
+
+<div class="product-status">
+● Скоро
+</div>
+
+</div>
+
+<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20узнать%20наличие%20стиральных%20машин."
+target="_blank"
+class="product-button">
+
+Узнать наличие
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- EMPTY -->
+
+<div class="empty-catalog"
+id="emptyCatalog">
+
+<div class="big-icon">
+📦
+</div>
+
+<h3>
+В этой категории пока нет товаров
+</h3>
+
+<p>
+Напишите нам в Telegram —
+мы подскажем актуальное наличие.
+</p>
+
+<a href="https://t.me/malugagood"
+target="_blank"
+class="btn tg">
+
+✈️ Написать в Telegram
+
+</a>
+
+</div>
+
+
+</div>
+
 </section>
 
 
-<!-- SELL -->
 
-<section id="sell" class="sell-section">
+<!-- =========================
+     SELL
+========================= -->
+
+<section id="sell"
+class="sell-section">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -989,25 +1841,31 @@ class="btn tg">
 
 <div class="sell-info">
 
+
 <div class="sell-info-box">
 
-<div class="icon">📸</div>
+<div class="icon">
+📸
+</div>
 
 <h3>
 Фотографии
 </h3>
 
 <p>
-Отправьте несколько фотографий
-техники.
+Сделайте несколько фотографий
+техники и отправьте нам.
 </p>
 
 </div>
 
 
+
 <div class="sell-info-box">
 
-<div class="icon">📝</div>
+<div class="icon">
+📝
+</div>
 
 <h3>
 Информация
@@ -1021,43 +1879,54 @@ class="btn tg">
 </div>
 
 
+
 <div class="sell-info-box">
 
-<div class="icon">💬</div>
+<div class="icon">
+💬
+</div>
 
 <h3>
-Обсудим
+Связь
 </h3>
 
 <p>
-Свяжитесь с нами в Telegram
-и обсудим вашу технику.
+Обсудим вашу технику
+в Telegram.
 </p>
 
 </div>
+
 
 </div>
 
 
 <div style="text-align:center;margin-top:30px;">
 
-<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20продать%20вам%20технику.%20Готов%20отправить%20фотографии%20и%20описание."
+<a href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20продать%20вам%20б%2Fу%20технику.%20Готов%20отправить%20фотографии%20и%20описание."
 target="_blank"
 class="btn tg">
+
 ✈️ Предложить технику
+
 </a>
 
 </div>
 
 </div>
+
 </section>
 
 
-<!-- ADVANTAGES -->
+
+<!-- =========================
+     ADVANTAGES
+========================= -->
 
 <section class="advantages">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -1075,9 +1944,12 @@ class="btn tg">
 
 <div class="advantages-grid">
 
+
 <div class="advantage">
 
-<div class="advantage-icon">🔍</div>
+<div class="advantage-icon">
+🔍
+</div>
 
 <h3>
 Проверка
@@ -1091,9 +1963,12 @@ class="btn tg">
 </div>
 
 
+
 <div class="advantage">
 
-<div class="advantage-icon">🚗</div>
+<div class="advantage-icon">
+🚗
+</div>
 
 <h3>
 Москва
@@ -1106,9 +1981,12 @@ class="btn tg">
 </div>
 
 
+
 <div class="advantage">
 
-<div class="advantage-icon">💰</div>
+<div class="advantage-icon">
+💰
+</div>
 
 <h3>
 Доступно
@@ -1122,31 +2000,42 @@ class="btn tg">
 </div>
 
 
+
 <div class="advantage">
 
-<div class="advantage-icon">📱</div>
+<div class="advantage-icon">
+📱
+</div>
 
 <h3>
 Telegram
 </h3>
 
 <p>
-Быстро отвечаем
-на вопросы.
+Быстрая связь
+с клиентами.
 </p>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
-<!-- CONTACT -->
 
-<section id="contacts" class="cta">
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contacts"
+class="cta">
 
 <div class="container cta-inner">
+
 
 <div>
 
@@ -1155,7 +2044,8 @@ Telegram
 </h2>
 
 <p>
-Позвоните или напишите нам в Telegram.
+Позвоните или напишите нам
+в Telegram.
 </p>
 
 </div>
@@ -1165,26 +2055,38 @@ Telegram
 
 <a href="tel:+79060071215"
 class="btn white">
+
 📞 +7 906 007-12-15
+
 </a>
+
 
 <a href="https://t.me/malugagood"
 target="_blank"
 class="btn tg">
+
 ✈️ @malugagood
+
 </a>
 
 </div>
 
 </div>
+
 </section>
 
 </main>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="container footer">
+
 
 <div>
 
@@ -1198,13 +2100,101 @@ class="btn tg">
 
 </div>
 
+
 <div class="footer-text">
-Москва · +7 906 007-12-15 · Telegram @malugagood
+
+Москва ·
++7 906 007-12-15 ·
+Telegram @malugagood
+
 </div>
+
 
 </div>
 
 </footer>
+
+
+
+<!-- =========================
+     CATALOG FILTER SCRIPT
+========================= -->
+
+<script>
+
+const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+const productCards =
+    document.querySelectorAll(".product-card");
+
+const emptyCatalog =
+    document.getElementById("emptyCatalog");
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter =
+            button.dataset.filter;
+
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        let visibleProducts = 0;
+
+
+        productCards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+
+            if (
+                filter === "all" ||
+                category === filter
+            ) {
+
+                card.style.display = "";
+
+                visibleProducts++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleProducts === 0) {
+
+            emptyCatalog.style.display =
+                "block";
+
+        } else {
+
+            emptyCatalog.style.display =
+                "none";
+
+        }
+
+    });
+
+});
+
+</script>
+
 
 </body>
 </html>
