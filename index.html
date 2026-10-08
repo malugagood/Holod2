@@ -1330,6 +1330,113 @@ footer {
     }
 }
 
+
+/* Customer reviews invitation */
+.reviews-section {
+    background: #f5f8fc;
+}
+
+.reviews-invite {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 30px;
+    border: 1px solid #e0e8f2;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 12px 34px rgba(27, 48, 78, .07);
+}
+
+.reviews-invite-icon {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 18px;
+    background: #e8f3ff;
+    font-size: 30px;
+}
+
+.reviews-eyebrow {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #1769ff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.reviews-invite-copy h3 {
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 23px;
+    line-height: 1.25;
+}
+
+.reviews-invite-copy p {
+    max-width: 650px;
+    margin: 0;
+    color: #657187;
+    line-height: 1.65;
+}
+
+.reviews-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 20px;
+    border-radius: 12px;
+    background: #229ed9;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.reviews-button:hover {
+    background: #168ac2;
+    transform: translateY(-2px);
+}
+
+.reviews-note {
+    margin: 16px 0 0;
+    color: #778398;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .reviews-invite {
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        padding: 22px;
+    }
+
+    .reviews-invite-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+
+    .reviews-invite-copy h3 {
+        font-size: 20px;
+    }
+
+    .reviews-invite-copy p {
+        font-size: 14px;
+    }
+
+    .reviews-button {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
 </style>
 
 </head>
@@ -2640,6 +2747,41 @@ Telegram
 
 
 </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CUSTOMER REVIEWS
+========================= -->
+
+<section id="reviews" class="reviews-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Отзывы покупателей</h2>
+<p>Ваше мнение помогает нам становиться лучше и помогает другим выбрать технику.</p>
+</div>
+
+<div class="reviews-invite">
+
+<div class="reviews-invite-icon" aria-hidden="true">💬</div>
+
+<div class="reviews-invite-copy">
+<span class="reviews-eyebrow">Уже покупали у нас?</span>
+<h3>Расскажите, как всё прошло</h3>
+<p>Будем благодарны за честный отзыв о покупке, доставке или ремонте. Напишите нам в Telegram — с вашего согласия сможем разместить отзыв на сайте.</p>
+</div>
+
+<a class="btn reviews-button" href="https://t.me/malugagood?text=Здравствуйте!%20Хочу%20оставить%20отзыв%20о%20покупке%20или%20ремонте." target="_blank" rel="noopener noreferrer">✈️ Оставить отзыв</a>
+
+</div>
+
+<p class="reviews-note">Публикуем только реальные отзывы и только с разрешения авторов.</p>
 
 </div>
 
