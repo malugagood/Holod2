@@ -1331,6 +1331,123 @@ footer {
 }
 
 
+/* Frequently asked questions */
+.faq-section {
+    background: #fff;
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 1px solid #e1e8f1;
+    border-radius: 15px;
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.faq-item[open] {
+    border-color: #b7d1ff;
+    box-shadow: 0 8px 24px rgba(30, 72, 130, .07);
+}
+
+.faq-item summary {
+    position: relative;
+    display: block;
+    padding: 20px 56px 20px 22px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.45;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #edf4ff;
+    color: #1769ff;
+    font-size: 22px;
+    font-weight: 500;
+    transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 0 22px 20px;
+    color: #657187;
+    line-height: 1.7;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-top: 14px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f5f8fc;
+    color: #47546a;
+    font-weight: 700;
+}
+
+.faq-contact a {
+    color: #1769ff;
+    text-decoration: none;
+}
+
+.faq-contact a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .faq-item summary {
+        padding: 17px 48px 17px 17px;
+        font-size: 15px;
+    }
+
+    .faq-item summary::after {
+        right: 14px;
+    }
+
+    .faq-answer {
+        padding: 0 17px 18px;
+        font-size: 14px;
+    }
+
+    .faq-contact {
+        align-items: stretch;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 /* Customer reviews invitation */
 .reviews-section {
     background: #f5f8fc;
@@ -1483,6 +1600,10 @@ class="logo">
 
 <a href="#sell">
 Продать
+</a>
+
+<a href="#faq">
+Вопросы
 </a>
 
 <a href="#contacts">
@@ -2782,6 +2903,60 @@ Telegram
 </div>
 
 <p class="reviews-note">Публикуем только реальные отзывы и только с разрешения авторов.</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FREQUENTLY ASKED QUESTIONS
+========================= -->
+
+<section id="faq" class="faq-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Частые вопросы</h2>
+<p>Коротко о покупке техники, доставке и ремонте.</p>
+</div>
+
+<div class="faq-list">
+
+<details class="faq-item">
+<summary>Техника новая или б/у?</summary>
+<div class="faq-answer"><p>Мы продаём б/у холодильники и стиральные машины. Перед продажей техника проверяется; актуальные фотографии, характеристики и цену можно посмотреть в карточке товара.</p></div>
+</details>
+
+<details class="faq-item">
+<summary>Есть ли гарантия?</summary>
+<div class="faq-answer"><p>На проданную технику предоставляется гарантия 3 месяца.</p></div>
+</details>
+
+<details class="faq-item">
+<summary>Сколько стоит доставка по Москве?</summary>
+<div class="faq-answer"><p>По северу Москвы — 1 500 ₽, по остальной Москве — 2 000 ₽. За МКАД стоимость рассчитывается дополнительно: +50 ₽/км. Подъём без лифта — дополнительно 300 ₽ за этаж. Точную стоимость лучше подтвердить перед покупкой.</p></div>
+</details>
+
+<details class="faq-item">
+<summary>Можно ли заказать ремонт бытовой техники?</summary>
+<div class="faq-answer"><p>Да, можно обратиться по поводу ремонта холодильника или стиральной машины. Напишите, какая техника сломалась и какие симптомы вы заметили, — обсудим возможность ремонта и выезда мастера.</p></div>
+</details>
+
+<details class="faq-item">
+<summary>Как узнать, есть ли товар в наличии?</summary>
+<div class="faq-answer"><p>Напишите нам в Telegram или позвоните. Уточним актуальное наличие и ответим на вопросы по конкретной модели.</p></div>
+</details>
+
+<div class="faq-contact">
+<span>Остались вопросы?</span>
+<a href="https://t.me/malugagood" target="_blank" rel="noopener noreferrer">✈️ Написать в Telegram</a>
+<a href="tel:+79060071215">📞 +7 906 007-12-15</a>
+</div>
+
+</div>
 
 </div>
 
