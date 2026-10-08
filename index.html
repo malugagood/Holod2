@@ -1278,12 +1278,70 @@ footer {
 
 }
 
+
+/* Fixed mobile action bar */
+.mobile-action-bar {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding-bottom: 76px;
+    }
+
+    .mobile-action-bar {
+        position: fixed;
+        z-index: 9999;
+        left: 12px;
+        right: 12px;
+        bottom: max(10px, env(safe-area-inset-bottom));
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 8px;
+        border: 1px solid rgba(210, 220, 233, .9);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, .96);
+        box-shadow: 0 8px 28px rgba(20, 35, 60, .2);
+        backdrop-filter: blur(12px);
+    }
+
+    .mobile-action-bar a {
+        display: flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 10px 12px;
+        border-radius: 11px;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .mobile-action-bar .mobile-catalog {
+        background: #1769ff;
+    }
+
+    .mobile-action-bar .mobile-telegram {
+        background: #229ed9;
+    }
+}
+
 </style>
 
 </head>
 
 
+
 <body>
+
+<nav class="mobile-action-bar" aria-label="Быстрые действия">
+    <a class="mobile-catalog" href="#products">🛒 Каталог</a>
+    <a class="mobile-telegram" href="https://t.me/malugagood" target="_blank" rel="noopener noreferrer">✈ Написать</a>
+</nav>
 
 
 <!-- =========================
