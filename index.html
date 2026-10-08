@@ -619,6 +619,27 @@ section {
     color: white;
 }
 
+.filter-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    margin-left: 4px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #eef2f7;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.filter-btn.active .filter-count,
+.filter-btn:hover .filter-count {
+    background: rgba(255,255,255,.22);
+    color: white;
+}
+
 .catalog-summary {
     display: flex;
     align-items: center;
@@ -1809,7 +1830,7 @@ class="catalog">
 class="filter-btn active"
 data-filter="all">
 
-Все
+Все <span class="filter-count" data-count-for="all">0</span>
 
 </button>
 
@@ -1818,7 +1839,7 @@ data-filter="all">
 class="filter-btn"
 data-filter="fridge">
 
-🧊 Холодильники
+🧊 Холодильники <span class="filter-count" data-count-for="fridge">0</span>
 
 </button>
 
@@ -1827,7 +1848,7 @@ data-filter="fridge">
 class="filter-btn"
 data-filter="washer">
 
-🧺 Стиральные машины
+🧺 Стиральные машины <span class="filter-count" data-count-for="washer">0</span>
 
 </button>
 
@@ -2658,16 +2679,27 @@ function updateHeroCount(count) {
     }
 }
 
-const initialCatalogCount =
-    document.querySelectorAll(".product-card").length;
+const productCards =
+    document.querySelectorAll(".product-card");
+
+const initialCatalogCount = productCards.length;
 
 updateHeroCount(initialCatalogCount);
 
+function updateFilterCounts() {
+    document.querySelectorAll(".filter-count").forEach(counter => {
+        const filter = counter.dataset.countFor;
+        const count = filter === "all"
+            ? productCards.length
+            : document.querySelectorAll(`.product-card[data-category="${filter}"]`).length;
+        counter.textContent = count;
+    });
+}
+
+updateFilterCounts();
+
 const filterButtons =
     document.querySelectorAll(".filter-btn");
-
-const productCards =
-    document.querySelectorAll(".product-card");
 
 const emptyCatalog =
     document.getElementById("emptyCatalog");
