@@ -215,7 +215,68 @@ nav a:hover {
 
     font-size: 19px;
 
-    margin-bottom: 30px;
+    margin-bottom: 22px;
+}
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 28px;
+}
+
+.hero-trust span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 11px;
+    border: 1px solid #dce5f5;
+    border-radius: 10px;
+    background: rgba(255,255,255,.78);
+    color: #46536a;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.hero-card {
+    position: relative;
+}
+
+.hero-card-top {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.16);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.hero-card-stat {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.hero-card-stat div {
+    min-width: 120px;
+    padding: 11px 13px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.13);
+}
+
+.hero-card-stat strong {
+    display: block;
+    font-size: 20px;
+}
+
+.hero-card-stat span {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    opacity: .86;
 }
 
 .buttons {
@@ -1056,8 +1117,21 @@ footer {
         font-size: 17px;
     }
 
+    .hero-trust span {
+        font-size: 12px;
+        padding: 7px 9px;
+    }
+
     .hero-card {
-        min-height: 300px;
+        min-height: 330px;
+    }
+
+    .hero-card-stat {
+        gap: 9px;
+    }
+
+    .hero-card-stat div {
+        min-width: 105px;
     }
 
     section {
@@ -1224,31 +1298,36 @@ class="telegram">
 
 <div class="badge">
 
-📍 Работаем по всей Москве
+📍 Москва · б/у техника с гарантией
 
 </div>
 
 
 <h1>
 
-Б/У техника<br>
+Б/У холодильники<br>
 
-<span>
-и ремонт на дому
-</span>
+<span>и стиральные машины</span>
 
 </h1>
 
 
 <p class="hero-text">
 
-Продаём б/у холодильники
-и стиральные машины,
-а также ремонтируем бытовую
-технику с выездом мастера
-по Москве.
+Проверенная техника, гарантия 3 месяца,
+доставка по Москве и МО. Также ремонтируем
+бытовую технику с выездом мастера по Москве.
 
 </p>
+
+
+<div class="hero-trust" aria-label="Преимущества">
+
+<span>✓ Проверено</span>
+<span>🛡 3 месяца гарантии</span>
+<span>🚚 Доставка</span>
+
+</div>
 
 
 <div class="buttons">
@@ -1256,13 +1335,13 @@ class="telegram">
 <a href="#products"
 class="btn blue">
 
-🛒 Купить технику
+🛒 Смотреть технику
 
 </a>
 
 
 <a href="#repair"
-class="btn blue">
+class="btn white">
 
 🔧 Заказать ремонт
 
@@ -1273,7 +1352,7 @@ class="btn blue">
 target="_blank"
 class="btn tg">
 
-✈️ Написать
+✈️ Написать в Telegram
 
 </a>
 
@@ -1287,20 +1366,33 @@ class="btn tg">
 
 <div>
 
+<div class="hero-card-top">БытМастер · Москва и МО</div>
+
 <div class="hero-icons">
 🧊 🧺
 </div>
 
 <h2>
 
-Холодильники<br>
-и стиральные машины
+Б/У техника<br>
+с гарантией 3 месяца
 
 </h2>
 
 <p>
-Продажа · Ремонт · Москва
+Проверка · Доставка · Занос
 </p>
+
+<div class="hero-card-stat">
+<div>
+<strong id="heroCatalogCount">10</strong>
+<span>товаров в каталоге</span>
+</div>
+<div>
+<strong>от 8 000 ₽</strong>
+<span>цены на технику</span>
+</div>
+</div>
 
 </div>
 
@@ -2519,6 +2611,20 @@ Telegram @malugagood
 
 <script>
 
+const heroCatalogCount =
+    document.getElementById("heroCatalogCount");
+
+function updateHeroCount(count) {
+    if (heroCatalogCount) {
+        heroCatalogCount.textContent = count;
+    }
+}
+
+const initialCatalogCount =
+    document.querySelectorAll(".product-card").length;
+
+updateHeroCount(initialCatalogCount);
+
 const filterButtons =
     document.querySelectorAll(".filter-btn");
 
@@ -2597,6 +2703,8 @@ filterButtons.forEach(button => {
                         ? visibleProducts + " товара"
                         : visibleProducts + " товаров";
         }
+
+        updateHeroCount(visibleProducts);
 
     });
 
