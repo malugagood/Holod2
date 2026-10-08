@@ -787,6 +787,57 @@ section {
 
 
 /* =========================
+   PURCHASE INFO
+========================= */
+
+.purchase-info {
+    background: #f5f7fb;
+}
+
+.purchase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.purchase-card {
+    background: white;
+    border: 1px solid #e1e6ee;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.purchase-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.purchase-card h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.purchase-card p {
+    color: #687386;
+    font-size: 14px;
+}
+
+.purchase-note {
+    margin-top: 16px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: #eef4ff;
+    color: #46536a;
+    font-size: 14px;
+    text-align: center;
+}
+
+.purchase-note strong {
+    color: #172033;
+}
+
+
+/* =========================
    SELL
 ========================= */
 
@@ -1028,6 +1079,27 @@ footer {
 
     .footer {
         flex-direction: column;
+    }
+
+    .purchase-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .purchase-card {
+        padding: 17px;
+    }
+
+    .purchase-card h3 {
+        font-size: 16px;
+    }
+
+    .purchase-card p {
+        font-size: 13px;
+    }
+
+    .purchase-note {
+        text-align: left;
     }
 
     .catalog-summary {
@@ -2074,6 +2146,65 @@ class="btn tg">
 
 </div>
 
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PURCHASE INFO
+========================= -->
+
+<section class="purchase-info">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Покупка без сюрпризов
+</h2>
+
+<p>
+Перед продажей техника проверяется. Вы заранее видите реальные фотографии,
+характеристики, цену и условия доставки.
+</p>
+
+</div>
+
+<div class="purchase-grid">
+
+<div class="purchase-card">
+<div class="purchase-icon">🔍</div>
+<h3>Проверяем</h3>
+<p>Проверяем технику перед продажей и указываем основные характеристики.</p>
+</div>
+
+<div class="purchase-card">
+<div class="purchase-icon">🛡</div>
+<h3>Гарантия 3 месяца</h3>
+<p>На проданную технику предоставляется гарантия 3 месяца.</p>
+</div>
+
+<div class="purchase-card">
+<div class="purchase-icon">🚚</div>
+<h3>Доставка</h3>
+<p>По северу Москвы — 1 500 ₽, по остальной Москве — 2 000 ₽.</p>
+</div>
+
+<div class="purchase-card">
+<div class="purchase-icon">🏠</div>
+<h3>Заносим</h3>
+<p>Поднимем технику в квартиру. Без лифта — дополнительно 300 ₽ за этаж.</p>
+</div>
+
+</div>
+
+<div class="purchase-note">
+<strong>За МКАД:</strong> доставка рассчитывается дополнительно — +50 ₽/км.
+Точную стоимость и наличие лучше уточнить в Telegram перед покупкой.
+</div>
 
 </div>
 
