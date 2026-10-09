@@ -752,6 +752,35 @@ section {
     font-size: 16px;
 }
 
+.catalog-sort {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: -12px 0 22px;
+    color: #596478;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.catalog-sort select {
+    max-width: 100%;
+    min-height: 44px;
+    padding: 10px 38px 10px 13px;
+    border: 1px solid #dce2ec;
+    border-radius: 10px;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+    cursor: pointer;
+}
+
+.catalog-sort select:focus-visible {
+    outline: 3px solid rgba(23,105,255,.25);
+    outline-offset: 2px;
+}
+
 .products-grid {
     display: grid;
 
@@ -2270,6 +2299,15 @@ data-filter="washer">
 
 <!-- PRODUCTS -->
 
+<div class="catalog-sort">
+<label for="priceSort">Сортировка по цене</label>
+<select id="priceSort" aria-label="Сортировка товаров по цене">
+<option value="default">Как в каталоге</option>
+<option value="asc">Сначала дешевле</option>
+<option value="desc">Сначала дороже</option>
+</select>
+</div>
+
 <div class="products-grid"
 id="productsGrid">
 
@@ -3196,6 +3234,29 @@ const filterButtons =
 
 const emptyCatalog =
     document.getElementById("emptyCatalog");
+
+const productsGrid = document.getElementById("productsGrid");
+const priceSort = document.getElementById("priceSort");
+const originalProductOrder = Array.from(productCards);
+
+function getProductPrice(card) {
+    const price = card.querySelector(".product-price");
+    return Number((price ? price.textContent : "").replace(/[^0-9]/g, "")) || 0;
+}
+
+if (priceSort && productsGrid) {
+    priceSort.addEventListener("change", () => {
+        const sortedCards = Array.from(productCards);
+        if (priceSort.value === "asc") {
+            sortedCards.sort((a, b) => getProductPrice(a) - getProductPrice(b));
+        } else if (priceSort.value === "desc") {
+            sortedCards.sort((a, b) => getProductPrice(b) - getProductPrice(a));
+        } else {
+            sortedCards.sort((a, b) => originalProductOrder.indexOf(a) - originalProductOrder.indexOf(b));
+        }
+        sortedCards.forEach(card => productsGrid.appendChild(card));
+    });
+}
 
 
 filterButtons.forEach(button => {
