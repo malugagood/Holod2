@@ -752,6 +752,42 @@ section {
     font-size: 16px;
 }
 
+.quick-models {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 14px;
+}
+.quick-models-title {
+  flex-basis: 100%;
+  color: #334155;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.quick-models a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #dbe3ec;
+  border-radius: 999px;
+  background: #fff;
+  color: #1d4ed8;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.quick-models a:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+.quick-models a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
 .catalog-sort {
     display: flex;
     align-items: center;
@@ -2298,6 +2334,14 @@ data-filter="washer">
 
 
 <!-- PRODUCTS -->
+
+<div class="quick-models" aria-label="Быстрый переход к моделям">
+  <span class="quick-models-title">Быстрый переход к моделям:</span>
+  <a href="product/beko-washer-6kg.html">Beko 6 кг — 8 000 ₽</a>
+  <a href="product/indesit-wisl102.html">Indesit — 8 000 ₽</a>
+  <a href="product/haier-washer-6kg.html">Haier 6 кг — 12 000 ₽</a>
+  <a href="product/hotpoint-ariston.html">Холодильник Hotpoint-Ariston — 15 000 ₽</a>
+</div>
 
 <div class="catalog-sort">
 <label for="priceSort">Сортировка по цене</label>
