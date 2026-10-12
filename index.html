@@ -34,6 +34,8 @@ content="Купить проверенный б/у холодильник или
       "@id": "https://malugagood.github.io/Holod2/#organization",
       "name": "БытМастер",
       "url": "https://malugagood.github.io/Holod2/",
+      "logo": "https://malugagood.github.io/Holod2/images/logo.svg",
+      "image": "https://malugagood.github.io/Holod2/images/logo.svg",
       "description": "Продажа проверенной б/у бытовой техники и ремонт холодильников и стиральных машин в Москве.",
       "address": {
         "@type": "PostalAddress",
@@ -190,16 +192,28 @@ header {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 25px;
-
     font-weight: 900;
-
     color: #1769ff;
-
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.logo span {
+.logo img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo-wordmark {
+    color: #1769ff;
+}
+
+.logo-wordmark > span {
     color: #172033;
 }
 
@@ -1594,6 +1608,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+    .logo { gap: 6px; font-size: 21px; }
+    .logo img { width: 38px; height: 38px; }
+
     .faq-item summary {
         padding: 17px 48px 17px 17px;
         font-size: 15px;
@@ -1744,9 +1761,10 @@ footer {
 <div class="container header">
 
 <a href="#top"
-class="logo">
+class="logo" aria-label="БытМастер — на главную">
 
-Быт<span>Мастер</span>
+<img src="images/logo.svg" alt="" width="48" height="48" fetchpriority="high">
+<span class="logo-wordmark">Быт<span>Мастер</span></span>
 
 </a>
 
