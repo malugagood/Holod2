@@ -1477,8 +1477,8 @@ footer {
         right: 12px;
         bottom: max(10px, env(safe-area-inset-bottom));
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
         padding: 8px;
         border: 1px solid rgba(210, 220, 233, .9);
         border-radius: 16px;
@@ -1489,21 +1489,27 @@ footer {
 
     .mobile-action-bar a {
         display: flex;
+        min-width: 0;
         min-height: 46px;
         align-items: center;
         justify-content: center;
-        gap: 7px;
-        padding: 10px 12px;
+        gap: 4px;
+        padding: 9px 4px;
         border-radius: 11px;
         color: white;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 800;
         text-align: center;
         text-decoration: none;
+        white-space: nowrap;
     }
 
     .mobile-action-bar .mobile-catalog {
         background: #1769ff;
+    }
+
+    .mobile-action-bar .mobile-call {
+        background: #16834a;
     }
 
     .mobile-action-bar .mobile-telegram {
@@ -1748,7 +1754,8 @@ footer {
 
 <nav class="mobile-action-bar" aria-label="Быстрые действия">
     <a class="mobile-catalog" href="#products">🛒 Каталог</a>
-    <a class="mobile-telegram" href="https://t.me/malugagood" target="_blank" rel="noopener noreferrer">✈ Написать</a>
+    <a class="mobile-call" href="tel:+79060071215" aria-label="Позвонить по номеру +7 906 007-12-15">📞 Звонок</a>
+    <a class="mobile-telegram" href="https://t.me/malugagood" target="_blank" rel="noopener noreferrer">✈ Telegram</a>
 </nav>
 
 
