@@ -18,7 +18,21 @@
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#172033;line-height:1.6}a{text-decoration:none;color:inherit}.container{width:min(1050px,92%);margin:auto}header{background:#fff;border-bottom:1px solid #e5e9f0;padding:16px 0}.logo{font-size:24px;font-weight:900;color:#1769ff}.logo span{color:#172033}.breadcrumb{padding:24px 0 10px;color:#687386;font-size:14px}.breadcrumb a{color:#1769ff}.product{display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:25px 0 70px}.gallery{background:#fff;border:1px solid #e1e6ee;border-radius:20px;padding:12px;box-shadow:0 10px 30px rgba(20,35,65,.05)}.gallery img{display:block;width:100%;height:auto;max-height:700px;object-fit:contain;border-radius:12px;background:#f3f5f8}.info{background:#fff;border:1px solid #e1e6ee;border-radius:20px;padding:30px}.type{color:#1769ff;font-weight:800;text-transform:uppercase;font-size:13px}h1{font-size:38px;line-height:1.1;margin:10px 0}.subtitle{color:#687386;font-size:17px;margin-bottom:22px}.price{font-size:34px;font-weight:900;margin:20px 0 6px}.status{color:#07856b;font-weight:800;margin-bottom:24px}.specs{border-top:1px solid #e6eaf0;border-bottom:1px solid #e6eaf0;margin:20px 0}.spec{display:flex;justify-content:space-between;gap:20px;padding:11px 0;border-bottom:1px solid #eef1f5}.spec:last-child{border-bottom:0}.spec span:first-child{color:#687386}.btn{display:block;text-align:center;padding:14px 18px;border-radius:10px;background:#229ed9;color:#fff;font-weight:800;margin-top:20px}.delivery{margin-top:24px}.delivery h2{font-size:21px}.delivery ul{padding-left:20px;color:#596478}.note{margin-top:18px;padding:14px;background:#f5f7fb;border-radius:12px;color:#687386;font-size:14px}@media(max-width:800px){.product{grid-template-columns:1fr}.info{padding:22px}h1{font-size:31px}}
 .extra-contact{display:block;margin-top:10px;padding:12px 16px;text-align:center;border:1px solid #d5e1ed;border-radius:10px;background:#fff;color:#1769ff;font-weight:800}.repair-link{margin-top:14px;text-align:center;color:#687386;font-size:14px}.repair-link a{color:#1769ff;font-weight:800;text-decoration:underline}
-</style>
+
+<style>
+.related-products{max-width:1100px;margin:28px auto 34px;padding:24px;background:#f5f7fb;border:1px solid #e2e8f1;border-radius:20px}
+.related-products h2{margin:0 0 8px;color:#1e2b40;font-size:clamp(22px,3vw,28px);line-height:1.25}
+.related-products-intro{margin:0 0 18px;color:#687386;line-height:1.6}
+.related-products-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.related-product-link{display:flex;min-width:0;flex-direction:column;justify-content:space-between;gap:10px;padding:16px;background:#fff;border:1px solid #dfe6f0;border-radius:14px;color:#243247;text-decoration:none;font-weight:800;line-height:1.45}
+.related-product-link span{color:#1769ff;font-size:14px;font-weight:900}
+.related-product-link:hover,.related-product-link:focus-visible{border-color:#1769ff;outline-color:#1769ff}
+.related-products-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:17px}
+.related-products-note{margin:0;color:#687386;font-size:14px;line-height:1.5}
+.related-products-all{display:inline-block;padding:11px 16px;border-radius:11px;background:#1769ff;color:#fff;text-decoration:none;font-weight:800}
+.related-products-all:hover,.related-products-all:focus-visible{background:#0f55d8}
+@media(max-width:700px){.related-products{padding:18px;margin:24px 0}.related-products-grid{grid-template-columns:1fr}.related-product-link{padding:14px}.related-products-footer{align-items:stretch;flex-direction:column}.related-products-all{text-align:center}}
+</style></style>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://malugagood.github.io/Holod2/"},{"@type":"ListItem","position":2,"name":"Каталог","item":"https://malugagood.github.io/Holod2/#productsGrid"},{"@type":"ListItem","position":3,"name":"Стиральные машины","item":"https://malugagood.github.io/Holod2/#productsGrid"},{"@type":"ListItem","position":4,"name":"ATLANT"}]}</script>
 </head>
@@ -57,6 +71,20 @@
 <a href="https://t.me/malugagood" target="_blank" rel="noopener noreferrer">Уточнить наличие и доставку в Telegram</a>
 </section>
 <style>.product-details{max-width:1050px;margin:8px auto 36px;padding:24px;background:#fff;border:1px solid #e1e6ee;border-radius:16px}.product-details h2{font-size:24px;line-height:1.25;margin:0 0 14px;color:#172033}.product-details p{color:#596478;margin:10px 0;line-height:1.7}.product-details a{display:inline-block;margin-top:8px;color:#1769ff;font-weight:800;text-decoration:underline}@media(max-width:600px){.product-details{padding:18px}.product-details h2{font-size:21px}}</style>
+
+<section class="related-products" aria-label="Другие стиральные машины">
+  <h2>Другие стиральные машины</h2>
+  <p class="related-products-intro">Сравните характеристики и цены других моделей. Актуальное наличие можно уточнить в Telegram.</p>
+  <div class="related-products-grid">
+    <a class="related-product-link" href="indesit-wisl102.html">Стиральная машина Indesit WISL 102, 5 кг<span>8 000 ₽</span></a>
+<a class="related-product-link" href="haier-washer-6kg.html">Стиральная машина Haier, 6 кг<span>12 000 ₽</span></a>
+<a class="related-product-link" href="beko-washer-6kg.html">Стиральная машина Beko, 6 кг<span>8 000 ₽</span></a>
+  </div>
+  <div class="related-products-footer">
+    <p class="related-products-note">Цены и наличие уточняйте перед покупкой.</p>
+    <a class="related-products-all" href="../index.html#products">Смотреть весь каталог</a>
+  </div>
+</section>
 </main>
 </body>
 </html>
